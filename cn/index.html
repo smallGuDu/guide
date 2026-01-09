@@ -1061,7 +1061,7 @@
             <!-- 访问统计 -->
             <div class="visit-stats">
                 <div class="stats-label">网站总访问次数</div>
-                <div class="stats-count" id="visitCount">加载中...</div>
+                <img src="https://w.saobby.com/w/3h7z7kmp">
             </div>
             
             <!-- 关于链接 -->
@@ -2329,25 +2329,25 @@ if (collapseBtn) {
             });
             
             // 模拟访问统计
-            function updateVisitCount() {
-                // 这里可以替换为实际的访问统计API
-                const countElement = document.getElementById('visitCount');
-                let count = localStorage.getItem('siteVisitCount');
+            // function updateVisitCount() {
+            //     // 这里可以替换为实际的访问统计API
+            //     const countElement = document.getElementById('visitCount');
+            //     let count = localStorage.getItem('siteVisitCount');
                 
-                if (!count) {
-                    count = Math.floor(Math.random() * 5000) + 1000;
-                    localStorage.setItem('siteVisitCount', count);
-                } else {
-                    count = parseInt(count) + 1;
-                    localStorage.setItem('siteVisitCount', count);
-                }
+            //     if (!count) {
+            //         count = Math.floor(Math.random() * 5000) + 1000;
+            //         localStorage.setItem('siteVisitCount', count);
+            //     } else {
+            //         count = parseInt(count) + 1;
+            //         localStorage.setItem('siteVisitCount', count);
+            //     }
                 
-                // 格式化数字显示
-                countElement.textContent = count.toLocaleString();
-            }
+            //     // 格式化数字显示
+            //     countElement.textContent = count.toLocaleString();
+            // }
             
-            // 更新访问统计
-            updateVisitCount();
+            // // 更新访问统计
+            // updateVisitCount();
             
             // 点击外部关闭背景面板
             document.addEventListener('click', function(e) {
