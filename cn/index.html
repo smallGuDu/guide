@@ -815,6 +815,38 @@
     border-style: solid;
     border-color: transparent var(--text-color) transparent transparent;
 }
+        #firstVisitNotice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.notice-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#closeNotice {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: none; /* 默认隐藏，3秒后显示 */
+}
     </style>
 </head>
 <body>
@@ -957,7 +989,8 @@
         <div class="announcement-content">
             <i class="fas fa-bullhorn announcement-icon"></i>
             <div class="announcement-text">
-                欢迎访问我の资源小站哇
+                欢迎访问我の资源小站哇<br>
+                如果你想返回旧站，请点击<a href="./indexold.html">这里</a>
             </div>
         </div>
     </div>
@@ -1133,12 +1166,12 @@
         </div>
         
         <div class="sites-grid">
-            <div class="site-card" onclick="window.open('https://sg.saop.cc/', '_blank')">
+            <div class="site-card" onclick="window.open('https://searchgal.homes/', '_blank')">
                 <div class="site-card-header">
-                    <img src="https://sg.saop.cc/gamepad-solid.svg" alt="SearchGAL" class="site-icon">
+                    <img src="https://searchgal.homes/logo.svg" alt="SearchGAL" class="site-icon">
                     <div class="site-info">
-                        <div class="site-name">SearchGAL</div>
-                        <div class="site-desc">游戏聚合搜索引擎，包含下列网站</div>
+                        <div class="site-name">Galgame聚合搜索</div>
+                        <div class="site-desc">Galgame 资源聚合搜索引擎，支持多站点搜索、游戏信息查询、补丁下载。一站式搜索体验，快速找到你想要的 Galgame 资源。</div>
                     </div>
                 </div>
                 <div class="site-tags">
@@ -2114,6 +2147,39 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            //============0.公告内容==========
+
+            document.addEventListener('DOMContentLoaded', function() {
+    // 检查是否已经显示过公告
+    const hasSeenNotice = localStorage.getItem('hasSeenNotice');
+    
+    if (!hasSeenNotice) {
+        // 创建公告弹窗
+        const noticeModal = document.createElement('div');
+        noticeModal.id = 'firstVisitNotice';
+        noticeModal.innerHTML = `
+            <div class="notice-content">
+                <h3>✨ 欢迎来到秒速5厘米 ✨</h3>
+                <p>这里是ACG资源导航站，收集各种二次元资源</p>
+                <p>请遵守相关法律法规，合理使用资源</p>
+                <button id="closeNotice">我知道了</button>
+            </div>
+        `;
+        document.body.appendChild(noticeModal);
+        
+        // 3秒后显示关闭按钮
+        setTimeout(() => {
+            document.getElementById('closeNotice').style.display = 'block';
+        }, 3000);
+        
+        // 关闭按钮点击事件
+        document.getElementById('closeNotice').addEventListener('click', function() {
+            noticeModal.remove();
+            localStorage.setItem('hasSeenNotice', 'true');
+        });
+    }
+});
+            
             // ========== 1. 侧边栏折叠功能 ==========
 const collapseBtn = document.getElementById('collapseSidebar');
 const sidebar = document.querySelector('.sidebar');
