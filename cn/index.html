@@ -1189,6 +1189,14 @@ html, body {
                             <i class="fas fa-chevron-down"></i>
                         </a>
                     </li>
+
+                    <li class="nav-category active" data-target="search">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                            <span>搜索引擎</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
                     
                     <li class="nav-category" data-target="game-resources">
                         <a href="#">
@@ -1248,9 +1256,9 @@ html, body {
 
                     <li class="nav-category" data-target="asmr">
                         <a href="#">
-                            <i class="fas fa-video"></i>
+                            <i class="fas fa-volume-down"></i>
                             <span>ASMR</span>
-                            <i class="fas fa-facebook-messenger"></i>
+                            <i class="fas fa-chevron-down"></i>
                         </a>
                     </li>
                     
@@ -1337,7 +1345,49 @@ html, body {
             </div>
         </div>
     </section>
-    
+    <section class="section" id="search">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div>
+                <h2 class="section-title">搜索引擎</h2>
+                <p class="section-subtitle">有一个好的搜索引擎可以更快的找到资源哦</p>
+            </div>
+        </div>
+
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://bing.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://cn.bing.com/sa/simg/favicon-trans-bg-blue-mg-png.png" alt="bing搜索" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">bing搜索</div>
+                        <div class="site-desc">bing搜索</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">微软</span>
+                    <span class="site-tag">搜索</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://yandex.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://yastatic.net/s3/home-static/_/nova/CXZ471pd.png" alt="Yandex搜索" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Yandex搜索</div>
+                        <div class="site-desc">俄国的搜索引擎</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">Yandex</span>
+                    <span class="site-tag">搜索</span>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
     <!-- 游戏资源 -->
     <section class="section" id="game-resources">
         <div class="section-header">
