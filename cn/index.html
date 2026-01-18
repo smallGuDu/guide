@@ -1129,6 +1129,28 @@ html, body {
     });
 })();
 </script>
+    <script>
+        // 方法一：遍历所有图片设置错误处理
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            // 替换为备用图片
+            this.src = '/images/fallback.jpg';
+            
+            // 或者显示占位元素
+            // const placeholder = document.createElement('div');
+            // placeholder.className = 'image-placeholder';
+            // placeholder.textContent = this.alt || '图片加载失败';
+            // this.parentNode.replaceChild(placeholder, this);
+            
+            // 防止无限循环
+            this.onerror = null;
+        });
+    });
+});
+    </script>
     <!--看板娘-->
     <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.4/dist/autoload.js"></script>
     <!-- 背景图片容器 -->
@@ -1154,7 +1176,7 @@ html, body {
                 <a href="https://space.bilibili.com/1496054034" target="_blank" class="header-link">
                     <i class="fab fa-bilibili"></i> B站
                 </a>
-                <a href="https://qm.qq.com/cgi-bin/qm/qr?k=gsRFGtzkyOsQByTi6FF81wEDH9geTaAa&jump_from=webapi&authKey=1Pcd5xsBk04fpN8JlDz8blX7HmbT3r9iiPNM5Ko1nO4cHAHXa034cbb3DWog2TGF" target="_blank" class="header-link">
+                <a href="https://qm.qq.com/q/WxJNg7f7YA" target="_blank" class="header-link">
                     <i class="fab fa-qq"></i> QQ群
                 </a>
             </div>
@@ -1171,7 +1193,6 @@ html, body {
             </div>
         </div>
     </div>
-    <img src="../assets/images/logos/eleduck.png" onerror="this.src='fallback.jpg';this.onerror=null;">
     <!-- 主内容区 -->
     <div class="main-container">
         <!-- 侧边导航 -->
