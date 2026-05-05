@@ -1,79 +1,2616 @@
 <!DOCTYPE html>
 <html lang="zh">
-
 <head>
-    <link rel="shortcut icon" href="./assets/images/favicon.png">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?c05bb16ea908292af9f6c513087a1cc3";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8550836177608334",
-        enable_page_level_ads: true
-    });
-    </script>
-    <meta charset="UTF-8">
-    <title>WebStack.cc - 设计师网址导航</title>
-    <script>
-    if (navigator.appName == "Netscape") {
-        var language = navigator.language;
-    } else {
-        var language = navigator.browserLanguage;
-
-    }
-
-    if (language.indexOf("en") > -1) {
-        document.location.href = "en/index.html";
-    } else if (language.indexOf("zh") > -1) {
-        document.location.href = "cn/index.html";
-    } else {
-        document.location.href = "en/index.html";
-
-    }
-    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="viggo" />
-    <title>WebStack.cc - Collection of resources and tools for Designers</title>
-    <meta name="keywords" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta name="description" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    
-    <!-- / FB Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="http://www.webstack.cc/">
-    <meta property="og:title" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <meta property="og:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta property="og:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
-    <meta property="og:site_name" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <!-- / Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、Resources网站，定时更新分享优质产品设计书签。www.webstack.cc">
-    <meta name="twitter:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,UX师网址导航,www.webstack.cc">
-    <meta name="twitter:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
-</head>
+    <title>秒速5厘米 - ACG资源导航</title>
+    <meta name="keywords" content="二次元导航，资源收集，动漫资源，游戏资源，网盘资源，github">
+    <meta name="description" content="清新简洁的二次元资源导航站，收集优质动漫、游戏、ACG资源">
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+    <style>
+       /* =========================================================
+   WebStack 风格重构优化版 CSS
+   ========================================================= */
 
-<body>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111463289-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    function gtag() {
-        dataLayer.push(arguments);
+:root {
+    --primary-color: #2c2e2f;    /* WebStack经典深色 */
+    --primary-light: #f96868;    /* 强调色 */
+    --secondary-color: #f9f9f9;  /* 浅灰背景 */
+    --accent-color: #f96868;     
+    --text-color: #2c2e2f;
+    --text-light: #979898;       /* 描述文字颜色 */
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --border-color: #e4ecf3;     /* WebStack经典边框色 */
+    --shadow-hover: 0 10px 20px -10px rgba(0, 0, 0, 0.15);
+    --radius: 4px;               /* WebStack偏向小圆角 */
+    --radius-sm: 4px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: var(--bg-color);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 隐藏原有的背景图片和毛玻璃，保持代码兼容但不显示 */
+.background-container { display: none; }
+
+/* ================== 顶部导航与公告 ================== */
+.top-header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 1.5rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.logo-text h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.logo-text p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.header-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.header-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 公告栏 WebStack 扁平风格 */
+.announcement-bar {
+    background: #fff3f3;
+    border-bottom: 1px solid #ffeb3b;
+    color: #e55039;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+}
+
+.announcement-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.announcement-content a {
+    color: #f96868;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+/* ================== 主布局与侧边栏 ================== */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    gap: 2rem;
+}
+
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--sidebar-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    margin-bottom: 1rem;
+    padding: 0 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header h2 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.sidebar-nav ul { list-style: none; }
+
+.nav-category { margin-bottom: 0.25rem; }
+
+.nav-category > a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #686a76;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+.nav-category > a i:first-child {
+    width: 24px;
+    text-align: left;
+}
+
+.nav-category > a .fa-chevron-down {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+.nav-category > a:hover {
+    color: var(--text-color);
+    background: #f8f9fa;
+}
+
+.nav-category.active > a {
+    background: #f8f9fa;
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+}
+
+.nav-subitems {
+    padding-left: 3.5rem;
+    display: none;
+    background: #fff;
+}
+
+.nav-category.active .nav-subitems { display: block; }
+
+.nav-subitems a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #979898;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.nav-subitems a:hover { color: var(--accent-color); }
+
+/* ================== 内容区域与 WebStack 卡片 ================== */
+.content-area { flex: 1; }
+
+.section {
+    background: transparent;
+    margin-bottom: 2.5rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-icon {
+    display: none; /* WebStack 通常标题旁只有简单的图标，不需要大色块 */
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.section-title::before {
+    content: "\f02b"; /* FontAwesome tag icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.section-subtitle { display: none; } /* 隐藏副标题使界面更干净 */
+
+/* 核心：WebStack 风格卡片网格 */
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.site-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.site-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: #d1d9e0;
+}
+
+.site-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* 移除下边距，紧凑布局 */
+}
+
+/* 给图标设置固定尺寸，防止加载失败时容器塌陷 */
+.site-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5; /* 加载失败时显示一个浅灰色底块 */
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.site-info {
+    flex: 1;
+    min-width: 0; /* 防止文本溢出撑开弹性盒子 */
+}
+
+.site-name {
+    font-weight: bold;
+    color: #3273dc;
+    font-size: 14px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.site-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    white-space: nowrap;      /* WebStack 经典单行截断 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.site-tags { display: none; } /* WebStack 通常不显示Tag，为了极致干净这里隐藏 */
+
+/* ================== 其他杂项 ================== */
+.background-settings { display: none; } /* 既然用了扁平风，背景切换功能建议隐藏 */
+
+.main-footer {
+    background: var(--card-bg);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.main-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* 访问统计融入 WebStack 侧边栏 */
+.visit-stats {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.visit-stats img { max-width: 100%; border-radius: 4px; }
+
+/* 响应式 */
+@media (max-width: 1024px) {
+    .main-container { flex-direction: column; }
+    .sidebar { width: 100%; position: static; max-height: none; }
+    .sites-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+    .sites-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .sites-grid { grid-template-columns: 1fr; }
+}
+        
+        /* 访问统计 */
+        .visit-stats {
+            background: rgba(106, 137, 204, 0.1);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .stats-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stats-count {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        /* 侧边栏折叠按钮 */
+.collapse-sidebar-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: -15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.collapse-sidebar-btn:hover {
+    background: var(--primary-light);
+    transform: scale(1.1);
+}
+
+/* 侧边栏折叠状态 */
+.sidebar.collapsed {
+    width: 70px !important;
+    padding: 1.5rem 0.8rem !important;
+}
+
+.sidebar.collapsed .sidebar-header h2,
+.sidebar.collapsed .nav-category span,
+.sidebar.collapsed .nav-subitems,
+.sidebar.collapsed .visit-stats,
+.sidebar.collapsed .about-link {
+    display: none !important;
+}
+
+.sidebar.collapsed .nav-category > a {
+    justify-content: center !important;
+    padding: 0.75rem !important;
+}
+
+.sidebar.collapsed .nav-category > a i:first-child {
+    margin-right: 0 !important;
+}
+
+/* 悬浮回到顶部按钮 */
+.float-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    display: none; /* 默认隐藏 */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.float-back-to-top:hover {
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.float-back-to-top.show {
+    display: flex !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .float-back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
     }
-    gtag('js', new Date());
+    
+    .sidebar.collapsed {
+        width: 60px !important;
+    }
+}
 
-    gtag('config', 'UA-111463289-1');
+/* 折叠状态下的提示框 */
+.sidebar-tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--text-color);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-left: 10px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.sidebar-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px 5px 5px 0;
+    border-style: solid;
+    border-color: transparent var(--text-color) transparent transparent;
+}
+       <style>
+/* 公告弹窗样式 */
+#firstVisitNotice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    animation: fadeIn 0.3s ease;
+}
+
+.notice-content {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: slideUp 0.5s ease;
+}
+
+.notice-icon {
+    font-size: 3rem;
+    color: #6a89cc;
+    margin-bottom: 1rem;
+}
+
+.notice-content h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.notice-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.notice-tips {
+    background: rgba(106, 137, 204, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.notice-tips p {
+    margin: 0.5rem 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.notice-tips i {
+    margin-right: 0.5rem;
+    color: #6a89cc;
+    width: 20px;
+}
+
+    </style>
+    <style>
+        /* 公告弹窗样式 - 加强版 */
+#firstVisitNotice {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(5px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important;
+    animation: fadeIn 0.3s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.notice-content {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa) !important;
+    padding: 2.5rem !important;
+    border-radius: 20px !important;
+    max-width: 450px !important;
+    width: calc(100% - 40px) !important;
+    text-align: center !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    animation: slideUp 0.5s ease !important;
+    margin: 20px !important;
+    position: relative !important;
+    z-index: 100000 !important;
+}
+
+/* 确保HTML和body元素有正确尺寸 */
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        transform: translateY(30px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+#closeNoticeBtn {
+    margin-top: 1.5rem !important;
+    padding: 0.8rem 2.5rem !important;
+    background: linear-gradient(135deg, #6a89cc, #85a0e0) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 30px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    opacity: 0.5 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+#closeNoticeBtn.active {
+    opacity: 1 !important;
+    box-shadow: 0 5px 15px rgba(106, 137, 204, 0.4) !important;
+}
+    </style>
+</head>
+<body>
+    <script>
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        // 公告功能
+        function initFirstVisitNotice() {
+            // 检查是否已经显示过
+            if (localStorage.getItem('firstVisitNoticeShown')) {
+                return;
+            }
+            
+            // 创建公告弹窗
+            const noticeHTML = `
+                <div id="firstVisitNotice">
+                    <div class="notice-content">
+                        <div class="notice-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>欢迎访问私の导航</h3>
+                        <p>这里是「秒速5厘米」导航站，为你收集各类上网冲浪资源</p>
+                        <h1 style="color: red;">请认真阅读一下内容！！</h1>
+                        <div class="notice-tips">
+                            <p><i class="fas fa-star"></i> 如果你是互联网新手，那么我建议你先下载Clash（一款加速器），并整一个免费vpn</p>
+                            <p><i class="fas fa-palette"></i>如果你有任何需要/问题 欢迎加Q群讨论（971124578）</p>
+                            <p><i class="fas fa-shield-alt"></i> 注意身体健康啦</p>
+                            <a href="https://qm.qq.com/q/PyBbs7Qwms">点此加群</a>
+                        </div>
+                        <button id="closeNoticeBtn" disabled>
+                            <span id="countdownText">3秒后关闭</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', noticeHTML);
+            
+            const closeBtn = document.getElementById('closeNoticeBtn');
+            const countdownText = document.getElementById('countdownText');
+            let countdown = 3;
+            
+            // 倒计时
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                if (countdown > 0) {
+                    countdownText.textContent = `${countdown}秒后关闭`;
+                } else {
+                    clearInterval(countdownInterval);
+                    countdownText.textContent = '开始探索';
+                    closeBtn.disabled = false;
+                    closeBtn.classList.add('active');
+                }
+            }, 1000);
+            
+            // 关闭按钮事件
+            closeBtn.addEventListener('click', () => {
+                document.getElementById('firstVisitNotice').remove();
+                localStorage.setItem('firstVisitNoticeShown', 'true');
+            });
+        }
+        
+        // 调用公告功能
+        initFirstVisitNotice();
+        
+        // 标题切换功能
+        const originalTitle = document.title;
+        
+        // 丰富的颜文字库
+        const welcomeEmojis = [
+            "(◍•ᴗ•◍) 欢迎回来！",
+            "(๑˃̵ᴗ˂̵)و 欢迎回来！",
+            "٩(◕‿◕｡)۶ 欢迎回来！",
+            "ヽ(・∀・)ﾉ 欢迎回来！",
+            "(◕‿◕)♡ 欢迎回来！",
+            "ヾ(◕ヮ◕)ノ 欢迎回来！",
+            "(*´▽`*) 欢迎回来！",
+            "(●ˇ∀ˇ●) 欢迎回来！",
+            "ヽ(>∀<☆)ノ 欢迎回来！",
+            "(づ￣ ³￣)づ 欢迎回来！"
+        ];
+        
+        const missYouEmojis = [
+            "(っ◕‿◕)っ 你快回来哇~",
+            "(；д；) 不要离开我~",
+            "(´;ω;`) 快回来看看~",
+            "｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡ 你快回来~",
+            "(つД`) 想你啦~",
+            "(；へ：) 别走嘛~",
+            "o(╥﹏╥)o 等你回来~",
+            "(⋟﹏⋞) 舍不得你~",
+            "(Ｔ▽Ｔ) 快回来~",
+            "༼;´༎ຶ ۝ ༎ຶ༽ 想你啦~"
+        ];
+        
+        // 随机选择颜文字
+        function getRandomEmoji(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+        
+        let welcomeTimeout = null;
+        
+        // 显示欢迎信息
+        function showWelcome() {
+            const welcomeTitle = getRandomEmoji(welcomeEmojis);
+            document.title = welcomeTitle;
+            
+            if (welcomeTimeout) {
+                clearTimeout(welcomeTimeout);
+            }
+            
+            welcomeTimeout = setTimeout(function() {
+                document.title = originalTitle;
+            }, 1000);
+        }
+        
+        // 显示想念信息
+        function showMissYou() {
+            const missYouTitle = getRandomEmoji(missYouEmojis);
+            document.title = missYouTitle;
+            
+            if (welcomeTimeout) {
+                clearTimeout(welcomeTimeout);
+            }
+        }
+        
+        // 页面可见性变化
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // 页面隐藏（离开）
+                showMissYou();
+            } else {
+                // 页面显示（回来）
+                showWelcome();
+            }
+        });
+        
+        // 标签页焦点变化
+        window.addEventListener('focus', showWelcome);
+        window.addEventListener('blur', showMissYou);
+        
+        // 鼠标离开窗口
+        document.addEventListener('mouseleave', function() {
+            // 延迟一点显示想念，避免鼠标偶然移出
+            setTimeout(function() {
+                if (!document.hasFocus()) {
+                    showMissYou();
+                }
+            }, 100);
+        });
+        
+        // 鼠标进入窗口
+        document.addEventListener('mouseenter', function() {
+            if (document.hasFocus()) {
+                showWelcome();
+            }
+        });
+        
+        // 页面加载时显示欢迎
+        setTimeout(showWelcome, 100);
+    });
+})();
+</script>
+    <script>
+        // 方法一：遍历所有图片设置错误处理
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            // 替换为备用图片
+            this.src = '../assets/images/logos/eleduck.png';
+            
+            // 或者显示占位元素
+            // const placeholder = document.createElement('div');
+            // placeholder.className = 'image-placeholder';
+            // placeholder.textContent = this.alt || '图片加载失败';
+            // this.parentNode.replaceChild(placeholder, this);
+            
+            // 防止无限循环
+            this.onerror = null;
+        });
+    });
+});
     </script>
-</body>
+    <!--看板娘-->
+    <!-- <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.4/dist/autoload.js"></script> -->
+    <!-- 背景图片容器 -->
+    <div class="background-container">
+        <img src="https://picx.zhimg.com/v2-a6e68003f62e0ef2de9a19721ca570d7_r.jpg" alt="网站背景" class="background-image" id="siteBackground">
+        <div class="glass-overlay"></div>
+    </div>
+    
+    <!-- 顶部导航和公告 -->
+    <header class="top-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="../assets/images/logo@2x.png" alt="秒速5厘米" class="logo-icon">
+                    <div class="logo-text">
+                        <h1>秒速5厘米</h1>
+                        <p>ACG资源导航</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="header-links">
+                <a href="https://space.bilibili.com/1496054034" target="_blank" class="header-link">
+                    <i class="fab fa-bilibili"></i> B站
+                </a>
+                <a href="https://qm.qq.com/q/WxJNg7f7YA" target="_blank" class="header-link">
+                    <i class="fab fa-qq"></i> QQ群
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 公告栏 -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <i class="fas fa-bullhorn announcement-icon"></i>
+            <div class="announcement-text">
+                欢迎访问我の资源小站哇<br>
+                如果你想返回旧站，请点击<a href="./indexold.html">这里</a><br>
+                <a href="http://blog.soliar.top/posts/guidang/">互联网冲浪指南（软件下载注册教程，vpn使用教程等等等等）</a><br>
+                目前网站已经更新了评论功能，评论功能在最下面或点击<a href="https://waline-chat-seven.vercel.app">此链接</a>查看<p style="color: red;">(评论暂时需要魔法环境(梯子))</p>
+                <a href="#firstVisitNotice">公告</a>
+                <p  style="color: red;">衷心忠告:我已经把教程写的很明白了w，如果你真的还是有问题，就请进q群吧（点右上角跳转）</p>
+            </div>
+        </div>
+    </div>
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 侧边导航 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-compass"></i> 资源分类</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-categories">
+                    <li class="nav-category active" data-target="my-sites">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span>我的网站</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
 
+                    <li class="nav-category active" data-target="search">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                            <span>搜索引擎</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-category" data-target="game-resources">
+                        <a href="#">
+                            <i class="fas fa-gamepad"></i>
+                            <span>游戏资源</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-category" data-target="anime-resources">
+                        <a href="#">
+                            <i class="fas fa-film"></i>
+                            <span>动漫资源</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-subitems">
+                            <a href="#all-age" data-section="anime-all">全年龄</a>
+                            <a href="#r18" data-section="anime-r18">R18</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-category" data-target="acg-sites">
+                        <a href="#">
+                            <i class="fas fa-globe-asia"></i>
+                            <span>ACG网站</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-category" data-target="comics">
+                        <a href="#">
+                            <i class="fas fa-book"></i>
+                            <span>漫画</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-subitems">
+                            <a href="#comic-all" data-section="comic-all">全年龄</a>
+                            <a href="#comic-r18" data-section="comic-r18">R18</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-category" data-target="novels">
+                        <a href="#">
+                            <i class="fas fa-book-open"></i>
+                            <span>黄文</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-category" data-target="videos">
+                        <a href="#">
+                            <i class="fas fa-video"></i>
+                            <span>视频</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-category" data-target="asmr">
+                        <a href="#">
+                            <i class="fas fa-volume-down"></i>
+                            <span>ASMR</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-category" data-target="vpn">
+                        <a href="#">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>梯子</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="nav-subitems">
+                            <a href="#free-vpn" data-section="vpn-free">免费梯子</a>
+                            <a href="#paid-vpn" data-section="vpn-paid">付费梯子</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-category" data-target="telegram">
+                        <a href="#">
+                            <i class="fab fa-telegram"></i>
+                            <span>TG群</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- 访问统计 -->
+            <div class="visit-stats">
+                <div class="stats-label">网站总访问次数</div>
+                <img src="https://w.saobby.com/w/3h7z7kmp">
+            </div>
+            
+            <!-- 关于链接 -->
+            <div class="about-link">
+                <a href="about.html" class="about-btn">
+                    <i class="fas fa-heart"></i> 关于本站
+                </a>
+            </div>
+        <button class="collapse-sidebar-btn" id="collapseSidebar">
+    <i class="fas fa-chevron-left"></i>
+</button>
+        </aside>
+        
+        <!-- 主要内容 -->
+<main class="content-area">
+    <!-- 我的网站 -->
+    <section class="section" id="my-sites">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div>
+                <h2 class="section-title">我的网站</h2>
+                <p class="section-subtitle">个人主页和博客</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('http://www.soliar.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="http://www.soliar.top/head.png" alt="我的主页" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">我的主页</div>
+                        <div class="site-desc">个人主页展示</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">个人</span>
+                    <span class="site-tag">主页</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('http://blog.soliar.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="http://blog.soliar.top/favicon/favicon-light-192.png" alt="我的博客" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">我的博客</div>
+                        <div class="site-desc">不经常发些文章</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">博客</span>
+                    <span class="site-tag">文章</span>
+                </div>
+            </div>
+            <div class="site-card" onclick="window.open('http://pan.soliar.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="http://www.soliar.top/head.png" alt="openlist" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">【新】Openlist盘</div>
+                        <div class="site-desc">一个Openlist盘</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">Openlist</span>
+                    <span class="site-tag">下载盘</span>
+                </div>
+            </div>
+            <div class="site-card" onclick="window.open('http://store.soliar.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="http://www.soliar.top/head.png" alt="软件下载" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">【新】软件下载</div>
+                        <div class="site-desc">将一些软件上传到蓝奏云等网盘以提高下载速度</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">下载器</span>
+                    <span class="site-tag">免费</span>
+                </div>
+            </div>
+            <div class="site-card" onclick="window.open('https://mango.soliar.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="http://www.soliar.top/head.png" alt="动漫聚搜" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name" style="color: red">【推荐】漫画聚搜</div>
+                        <div class="site-desc">聚搜，能搜到各种网站的漫画</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">极速</span>
+                    <span class="site-tag">聚搜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="search">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div>
+                <h2 class="section-title">搜索引擎</h2>
+                <p class="section-subtitle">有一个好的搜索引擎可以更快的找到资源哦</p>
+            </div>
+        </div>
+
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://bing.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://cn.bing.com/sa/simg/favicon-trans-bg-blue-mg-png.png" alt="bing搜索" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">bing搜索</div>
+                        <div class="site-desc">bing搜索</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">微软</span>
+                    <span class="site-tag">搜索</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://yandex.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://yastatic.net/s3/home-static/_/nova/CXZ471pd.png" alt="Yandex搜索" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Yandex搜索</div>
+                        <div class="site-desc">俄国的搜索引擎</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">Yandex</span>
+                    <span class="site-tag">搜索</span>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- 游戏资源 -->
+    <section class="section" id="game-resources">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div>
+                <h2 class="section-title">游戏资源</h2>
+                <p class="section-subtitle">GAL游戏和其他游戏资源站点</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://www.searchgal.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.searchgal.top/logo.svg" alt="SearchGAL" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name" style="color:red;">Galgame聚合搜索</div>
+                        <div class="site-desc">Galgame 资源聚合搜索引擎，支持多站点搜索、游戏信息查询、补丁下载。一站式搜索体验，快速找到你想要的 Galgame 资源。</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">聚合搜索</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('http://zi0.cc/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://i.iij.li/i/2024/02/65da00d5bf894.webp" alt="梓澪の妙妙屋" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">梓澪の妙妙屋</div>
+                        <div class="site-desc">知名游戏资源盘</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">游戏资源</span>
+                    <span class="site-tag">网盘</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.shinnku.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.shinnku.com/favicon.ico" alt="真红の小站" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">真红の小站</div>
+                        <div class="site-desc">真红姐姐的gal小站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">GAL</span>
+                    <span class="site-tag">游戏</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.fufugal.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/favicon.png" alt="初音的青葱" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">初音的青葱</div>
+                        <div class="site-desc">需要注册登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://inarigal.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/favicon.png" alt="稻香GAL" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">稻香GAL</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://acgyyg.ru/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/favicon.png" alt="ACG嘤嘤怪" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">ACG嘤嘤怪</div>
+                        <div class="site-desc">需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">需登录</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.ggbases.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/favicon.png" alt="GGbases" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">GGbases</div>
+                        <div class="site-desc">不需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">游戏</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://game.acgs.one/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://img.acgs.one/2025-11-02/OBsfoG1Ydr.webp" alt="绮梦ACG" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">绮梦ACG</div>
+                        <div class="site-desc">不需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://koyso.to/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/shejizhoukan.png" alt="Koyso" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Koyso</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">游戏</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.kungal.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.kungal.com/_ipx/_/favicon.webp" alt="鲲GAL" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">鲲GAL</div>
+                        <div class="site-desc">较为知名，无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">GAL</span>
+                    <span class="site-tag">知名</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.limulu.moe/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="莉斯坦ACG" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">莉斯坦ACG</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://gallibrary.pw/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="GAL图书馆" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">GAL图书馆</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://res.nyne.dev/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="Nysoure" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Nysoure</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">资源</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.qingju.org/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.qingju.org/wp-content/uploads/2025/02/a2623c222320250217222344.webp" alt="青桔ACG" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">青桔ACG</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://catcat.cloud/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://image.catcat.blog/catcat/2023/10/15/favicon.webp" alt="猫猫网盘" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">猫猫网盘</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">网盘</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.nyantaku.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="喵源领域" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">喵源领域</div>
+                        <div class="site-desc">需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">需登录</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.chgal.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="绅士天堂" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">绅士天堂</div>
+                        <div class="site-desc">需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">需登录</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.nullcloud.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="未知云盘" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">未知云盘</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">网盘</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://05fx.022016.xyz/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://s1.ax1x.com/2023/04/07/ppTiFpQ.png" alt="05の资源小站" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">05の资源小站</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">资源</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.touchgal.us/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="Touchgal" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Touchgal</div>
+                        <div class="site-desc">需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://galzy.eu.org/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://galzy.eu.org/favicon.ico" alt="紫缘社" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">紫缘社</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.galgamex.net/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.galgamex.net/_next/image?url=%2Ffavicon.webp&w=32&q=75" alt="Galgamex" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Galgamex</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">GAL</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://lzacg.cc/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="量子ACG" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">量子ACG</div>
+                        <div class="site-desc">无需登录</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">无需登录</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 动漫资源 -->
+    <section class="section" id="anime-resources">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-film"></i>
+            </div>
+            <div>
+                <h2 class="section-title">动漫资源（全年龄）</h2>
+                <p class="section-subtitle">全年龄向动漫观看网站</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://www.yhmb.cc/index.html', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.yhmb.cc/data/uploadFile/PnuFdF1751091562370877.png" alt="樱花动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">樱花动漫</div>
+                        <div class="site-desc">真假樱花网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('http://www.fengche.one/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.fengche.one/template/a_0001/images/favicon.png" alt="风车动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">风车动漫</div>
+                        <div class="site-desc">动漫观看网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.fqdm.cc/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="番茄动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">番茄动漫</div>
+                        <div class="site-desc">动漫观看网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.jibi.cc/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">动漫</div>
+                        <div class="site-desc">动漫观看网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.jcy23.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="囧次元" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">囧次元</div>
+                        <div class="site-desc">动漫观看网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.cycani.org/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.cycani.org/upload/site/20240319-1/23324d2df3da86834984e523293636cf.png" alt="次元城动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">次元城动漫</div>
+                        <div class="site-desc">感觉不错的一个</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">动漫</span>
+                    <span class="site-tag">观看</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 里番 -->
+    <section class="section" id="nsfw-anime">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div>
+                <h2 class="section-title">里番</h2>
+                <p class="section-subtitle">里番内容站点</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://acgmhn.com/hanime/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="ACG漫画网" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">ACG漫画网</div>
+                        <div class="site-desc">里番内容</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://omofun111.top/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="Omofun" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Omofun</div>
+                        <div class="site-desc">里番内容</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://www.agedm.io/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="AGE动漫" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">AGE动漫</div>
+                        <div class="site-desc">里番内容</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://hanime1.me/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="Haninme" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Haninme</div>
+                        <div class="site-desc">很多mmd，但是要梯子</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://hentaimama.io/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="Hentaimama" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Hentaimama</div>
+                        <div class="site-desc">梯子</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://tube.hentaistream.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="没名字" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">没名字</div>
+                        <div class="site-desc">梯子</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">里番</span>
+                    <span class="site-tag">动漫</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- ACG网站 -->
+    <section class="section" id="acg-sites">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-globe-asia"></i>
+            </div>
+            <div>
+                <h2 class="section-title">ACG网站</h2>
+                <p class="section-subtitle">动漫游戏社区和Wiki</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://bangumi.tv/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://lain.bgm.tv/pic/user/l/icon.jpg" alt="Bangumi" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Bangumi</div>
+                        <div class="site-desc">知名番剧wiki网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">Wiki</span>
+                    <span class="site-tag">番剧</span>
+                    <span class="site-tag">社区</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://mzh.moegirl.org.cn/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://img.moegirl.org.cn/favicon.ico" alt="萌娘百科" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">萌娘百科</div>
+                        <div class="site-desc">国内知名ACG-wiki网站</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">Wiki</span>
+                    <span class="site-tag">百科</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 漫画 -->
+    <section class="section" id="comics">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div>
+                <h2 class="section-title">漫画</h2>
+                <p class="section-subtitle">漫画内容站点</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://jmcomiced.org', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://jmcomiced.org/favicon.ico?v=2" alt="JM天堂(发布页)" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">JM天堂(发布页)</div>
+                        <div class="site-desc">可能需要梯子，里面有直连线路</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://18comic.vip/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://18comic.vip/favicon.ico" alt="JM天堂(发布页)" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">JM天堂(永久页)</div>
+                        <div class="site-desc">梯子</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://bkmh.me/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="哔咔漫画" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">哔咔漫画</div>
+                        <div class="site-desc">梯子</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://e-hentai.org/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="E站" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">E站</div>
+                        <div class="site-desc">知名漫画平台（要梯子）</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://github.com/xiaojieonly/Ehviewer_CN_SXJ/releases', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://raw.githubusercontent.com/xiaojieonly/Ehviewer_CN_SXJ/BiLi_PC_Gamer/fastlane/metadata/android/en-US/images/icon.png" alt="E站（软件）" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">E站（软件）</div>
+                        <div class="site-desc">这是一个 E-Hentai Android 平台的浏览器。</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://www.favcomic.net/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="喜漫漫画" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">喜漫漫画</div>
+                        <div class="site-desc">韩漫多一点</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://acgmhn.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="ACG漫画网" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">ACG漫画网</div>
+                        <div class="site-desc"></div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://www.pixiv.net/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.pixiv.net/favicon20250122.ico" alt="PIXIV（主站）" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">PIXIV（主站）</div>
+                        <div class="site-desc">知名插画日本插画平台</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://github.com/CeuiLiSA/Pixiv-Shaft', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.pixiv.net/favicon20250122.ico" alt="Shaft" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Shaft</div>
+                        <div class="site-desc">Pixiv 第三方客户端（支持直连）</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- 黄文网站 -->
+    <section class="section" id="novels">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <div>
+                <h2 class="section-title">黄文</h2>
+                <p class="section-subtitle">黄文网站</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://www.pixiv.net/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.pixiv.net/favicon20250122.ico" alt="PIXIV（主站）" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">PIXIV（主站）</div>
+                        <div class="site-desc">P站（pixiv）有很多好看的小说</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://www.rouwenwu.in/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="肉文屋" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">肉文屋</div>
+                        <div class="site-desc">没用过</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">漫画</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 视频网站 -->
+    <section class="section" id="videos">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <div>
+                <h2 class="section-title">视频</h2>
+                <p class="section-subtitle">视频分享平台</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://pornhub.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://ei.phncdn.com/www-static/favicon.ico?cache=2025122301" alt="Pornhub" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Pornhub</div>
+                        <div class="site-desc">太知名了（需要梯子）</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://www.xvideos.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://static-cdn77.xvideos-cdn.com/v3/img/skins/default/logo/xv.black.svg" alt="Xvideos" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Xvideos</div>
+                        <div class="site-desc">算知名吧，日本的（需要梯子）</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://x.com', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X(推特)" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">X(推特)</div>
+                        <div class="site-desc">记得年满18岁哦</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://91porn.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://91porn.com/favicon.ico" alt="91" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">91</div>
+                        <div class="site-desc">过于知名</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://buliangdh.vip/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://buliangdh.vip/favicon.ico" alt="从小用到大，请注意，这个网站里很多恶性广告，建议开屏蔽插件或用电脑访问" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">不良研究所</div>
+                        <div class="site-desc">从小用到大，请注意，这个网站里很多恶性广告，建议开屏蔽插件或用电脑访问</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                    <span class="site-tag">导航</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://haijiao.com/home', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="知名，需要加速器" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">海角</div>
+                        <div class="site-desc">知名，需要加速器</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">R18</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- asmr -->
+    <section class="section" id="asmr">  
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-wifi"></i>
+            </div>
+            <div>
+                <h2 class="section-title">ASMR</h2>
+                <p class="section-subtitle">ASMR专区唔</p>
+            </div>
+        </div>
+
+        <div class="sites-grid">
+             <div class="site-card" onclick="window.open('https://jiuliacg.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://img.alicdn.com/imgextra/i4/2201716776317/O1CN01kwy3QY1wXF2tUVkUx_!!2201716776317.webp" alt="玖黎ACG" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">玖黎ACG</div>
+                        <div class="site-desc">一个免费分享Gal,Cos,Asmr的网站Ciallo～(∠・ω< )⌒★</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">ASMR</span>
+                    <span class="site-tag">ACG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 免费网络工具 -->
+    <section class="section" id="vpn">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-wifi"></i>
+            </div>
+            <div>
+                <h2 class="section-title">免费网络工具</h2>
+                <p class="section-subtitle">网络访问工具</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://www.clashverge.dev/', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://www.clashverge.dev/assets/logo.png" alt="Clash" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">Clash（网络工具）</div>
+                        <div class="site-desc">网络工具软件</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">工具</span>
+                    <span class="site-tag">软件</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://clashnodes.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="clashnodes" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">clashnodes（提供链接）</div>
+                        <div class="site-desc">网络工具链接提供</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">工具</span>
+                    <span class="site-tag">链接</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://clashstair.com/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="clashstair" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">clashstair（提供链接）</div>
+                        <div class="site-desc">网络工具链接提供</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">工具</span>
+                    <span class="site-tag">链接</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://www.freeclashnode.com/free-node/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="freeclashnode" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">freeclashnode（提供链接）</div>
+                        <div class="site-desc">网络工具链接提供</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">工具</span>
+                    <span class="site-tag">链接</span>
+                </div>
+            </div>
+            
+            <div class="site-card" onclick="window.open('https://nodefree.me/', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="nodefree" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">nodefree（提供链接）</div>
+                        <div class="site-desc">网络工具链接提供</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">工具</span>
+                    <span class="site-tag">链接</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 付费网络服务 -->
+    <section class="section" id="paid-vpn">
+        <div class="section-header">
+            <div class="section-icon">  
+                <i class="fas fa-crown"></i>
+            </div>
+            <div>
+                <h2 class="section-title">付费网络服务</h2>
+                <p class="section-subtitle">付费网络服务</p>
+            </div>
+        </div>
+        
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://congyu.moe/auth/login', '_blank')">
+                <div class="site-card-header">
+                    <img src="https://congyu.moe/_next/static/media/murasame.724033df.svg" alt="从雨云" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">从雨云</div>
+                        <div class="site-desc">特殊网络服务</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">付费</span>
+                    <span class="site-tag">网络</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="telegram">
+        <div class="section-header">
+            <div class="section-icon">  
+                <i class="fas fa-telegram"></i>
+            </div>
+            <div>
+                <h2 class="section-title">TG群</h2>
+                <p class="section-subtitle"><a href="https://www.ermao.net/blog/telegram/">必看！telegram使用教程</a></p>
+            </div>
+        </div>
+
+        <div class="sites-grid">
+            <div class="site-card" onclick="window.open('https://t.me/ButterLeague', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="黄油联盟" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">黄油联盟</div>
+                        <div class="site-desc">很多黄油</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">黄油</span>
+                    <span class="site-tag">R18</span>
+                </div>
+            </div>
+
+            <div class="site-card" onclick="window.open('https://t.me/sososo', '_blank')">
+                <div class="site-card-header">
+                    <img src="../assets/images/logos/eleduck.png" alt="极搜" class="site-icon">
+                    <div class="site-info">
+                        <div class="site-name">极搜</div>
+                        <div class="site-desc">tg搜索机器人</div>
+                    </div>
+                </div>
+                <div class="site-tags">
+                    <span class="site-tag">搜索</span>
+                    <span class="site-tag">视频</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+    </div>
+    
+    <!-- 背景设置面板 -->
+    <div class="background-settings">
+        <button class="bg-toggle-btn" id="bgToggle">
+            <i class="fas fa-image"></i>
+        </button>
+        <div class="bg-panel" id="bgPanel">
+            <h3><i class="fas fa-palette"></i> 背景设置</h3>
+            <div class="bg-options">
+                <div class="bg-option active" data-bg="https://picx.zhimg.com/v2-a6e68003f62e0ef2de9a19721ca570d7_r.jpg">
+                    <img src="https://picx.zhimg.com/v2-a6e68003f62e0ef2de9a19721ca570d7_r.jpg" alt="默认背景">
+                    <span>默认背景</span>
+                </div>
+                <div class="bg-option" data-bg="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="山脉">
+                    <span>山脉</span>
+                </div>
+                <div class="bg-option" data-bg="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="星空">
+                    <span>星空</span>
+                </div>
+                <div class="bg-option" data-bg="https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+                    <img src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="樱花">
+                    <span>樱花</span>
+                </div>
+            </div>
+            <div class="bg-upload">
+                <label for="bgUpload">
+                    <i class="fas fa-upload"></i> 上传自定义背景
+                </label>
+                <input type="file" id="bgUpload" accept="image/*">
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                &copy; 2025 <a href="index.html"><strong>秒速5厘米</strong></a> - ACG资源导航 | 
+                设计: <a href="https://www.viggoz.com" target="_blank"><strong>Viggo</strong></a> |
+                整理: <a href="http://www.soliar.top" target="_blank"><strong>Soliar</strong></a>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">关于本站</a>
+                <a href="#" id="backToTop"><i class="fas fa-arrow-up"></i> 返回顶部</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('error', function(event) {
+    var target = event.target;
+    if (target.tagName.toLowerCase() === 'img') {
+        // 1. 立即清除 onerror 属性，防止 HTML 里的内联代码干扰
+        target.onerror = null;
+        
+        // 2. 检查是否已经尝试过替换，防止无限循环
+        if (target.getAttribute('data-failed')) return;
+        target.setAttribute('data-failed', 'true');
+
+        // 3. 替换为兜底图（请确保这个 URL 是绝对稳定的，甚至可以用 Base64）
+        const defaultImg = "https://wkphoto.cdn.bcebos.com/eac4b74543a9822638ffe67e9a82b9014a90ebaa.jpg"; // 示例：一个稳定的地球图标
+        target.src = defaultImg;
+        
+        // 4. 样式兜底：如果连图标都显示不出来，直接隐藏图片或显示文字
+        target.style.objectFit = "contain";
+    }
+}, true);
+        document.addEventListener('DOMContentLoaded', function() {
+            //============0.公告内容==========
+
+            document.addEventListener('DOMContentLoaded', function() {
+    // 检查是否已经显示过公告
+    const hasSeenNotice = localStorage.getItem('hasSeenNotice');
+    
+    if (!hasSeenNotice) {
+        // 创建公告弹窗
+        const noticeModal = document.createElement('div');
+        noticeModal.id = 'firstVisitNotice';
+        noticeModal.innerHTML = `
+            <div class="notice-content">
+                <h3>✨ 欢迎来到秒速5厘米 ✨</h3>
+                <p>这里是ACG资源导航站，收集各种二次元资源</p>
+                <p>请遵守相关法律法规，合理使用资源</p>
+                <button id="closeNotice">我知道了</button>
+            </div>
+        `;
+        document.body.appendChild(noticeModal);
+        
+        // 3秒后显示关闭按钮
+        setTimeout(() => {
+            document.getElementById('closeNotice').style.display = 'block';
+        }, 3000);
+        
+        // 关闭按钮点击事件
+        document.getElementById('closeNotice').addEventListener('click', function() {
+            noticeModal.remove();
+            localStorage.setItem('hasSeenNotice', 'true');
+        });
+    }
+});
+            
+            // ========== 1. 侧边栏折叠功能 ==========
+const collapseBtn = document.getElementById('collapseSidebar');
+const sidebar = document.querySelector('.sidebar');
+
+// 初始化状态
+const savedState = localStorage.getItem('sidebarCollapsed');
+if (savedState === 'true') {
+    sidebar.classList.add('collapsed');
+    updateCollapseIcon();
+}
+
+// 点击折叠/展开
+if (collapseBtn) {
+    collapseBtn.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
+        updateCollapseIcon();
+        
+        // 保存状态
+        localStorage.setItem('sidebarCollapsed', 
+            sidebar.classList.contains('collapsed')
+        );
+    });
+}
+
+// 更新折叠图标
+function updateCollapseIcon() {
+    if (!collapseBtn) return;
+    
+    const icon = collapseBtn.querySelector('i');
+    if (sidebar.classList.contains('collapsed')) {
+        icon.classList.remove('fa-chevron-left');
+        icon.classList.add('fa-chevron-right');
+    } else {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-left');
+    }
+}
+
+// ========== 2. 悬浮回到顶部功能 ==========
+// 创建按钮
+const floatBackBtn = document.createElement('button');
+floatBackBtn.className = 'float-back-to-top';
+floatBackBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+floatBackBtn.id = 'floatBackToTop';
+document.body.appendChild(floatBackBtn);
+
+// 滚动监听
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        floatBackBtn.classList.add('show');
+    } else {
+        floatBackBtn.classList.remove('show');
+    }
+});
+
+// 点击回到顶部
+floatBackBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// ========== 3. 折叠状态下的悬浮提示 ==========
+function setupTooltips() {
+    const navCategories = document.querySelectorAll('.nav-category');
+    
+    navCategories.forEach(category => {
+        const link = category.querySelector('a');
+        const text = category.querySelector('span');
+        
+        if (!text) return;
+        
+        link.addEventListener('mouseenter', function() {
+            // 只有在折叠状态下才显示提示
+            if (sidebar.classList.contains('collapsed')) {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'sidebar-tooltip';
+                tooltip.textContent = text.textContent;
+                this.appendChild(tooltip);
+            }
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            const tooltip = this.querySelector('.sidebar-tooltip');
+            if (tooltip) tooltip.remove();
+        });
+    });
+}
+
+// 初始化工具提示
+setupTooltips();
+
+// 当折叠状态改变时重新设置工具提示
+if (collapseBtn) {
+    collapseBtn.addEventListener('click', function() {
+        setTimeout(setupTooltips, 300); // 等待动画完成
+    });
+}
+            
+            // 导航菜单交互
+            const navCategories = document.querySelectorAll('.nav-category');
+            
+            navCategories.forEach(category => {
+                const toggle = category.querySelector('a');
+                
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 关闭其他分类
+                    navCategories.forEach(other => {
+                        if (other !== category) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    
+                    // 切换当前分类
+                    category.classList.toggle('active');
+                    
+                    // 滚动到对应部分
+                    const targetId = category.getAttribute('data-target');
+                    if (targetId) {
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // 背景切换功能
+            const bgToggle = document.getElementById('bgToggle');
+            const bgPanel = document.getElementById('bgPanel');
+            const bgOptions = document.querySelectorAll('.bg-option');
+            const bgUpload = document.getElementById('bgUpload');
+            const siteBackground = document.getElementById('siteBackground');
+            
+            // 切换背景面板显示
+            bgToggle.addEventListener('click', function() {
+                bgPanel.classList.toggle('show');
+            });
+            
+            // 点击背景选项
+            bgOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // 移除其他选项的active类
+                    bgOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // 添加当前选项的active类
+                    this.classList.add('active');
+                    
+                    // 更改背景图片
+                    const bgUrl = this.getAttribute('data-bg');
+                    siteBackground.src = bgUrl;
+                    
+                    // 保存到本地存储
+                    localStorage.setItem('siteBackground', bgUrl);
+                    
+                    // 3秒后自动关闭面板
+                    setTimeout(() => {
+                        bgPanel.classList.remove('show');
+                    }, 3000);
+                });
+            });
+            
+            // 上传自定义背景
+            bgUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(event) {
+                        const bgUrl = event.target.result;
+                        siteBackground.src = bgUrl;
+                        
+                        // 保存到本地存储
+                        localStorage.setItem('siteBackground', bgUrl);
+                        
+                        // 3秒后自动关闭面板
+                        setTimeout(() => {
+                            bgPanel.classList.remove('show');
+                        }, 3000);
+                    };
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // 加载保存的背景
+            const savedBg = localStorage.getItem('siteBackground');
+            if (savedBg) {
+                siteBackground.src = savedBg;
+                
+                // 激活对应的选项
+                bgOptions.forEach(option => {
+                    if (option.getAttribute('data-bg') === savedBg) {
+                        option.classList.add('active');
+                    }
+                });
+            }
+            
+            // 返回顶部
+            const backToTop = document.getElementById('backToTop');
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // 模拟访问统计
+            // function updateVisitCount() {
+            //     // 这里可以替换为实际的访问统计API
+            //     const countElement = document.getElementById('visitCount');
+            //     let count = localStorage.getItem('siteVisitCount');
+                
+            //     if (!count) {
+            //         count = Math.floor(Math.random() * 5000) + 1000;
+            //         localStorage.setItem('siteVisitCount', count);
+            //     } else {
+            //         count = parseInt(count) + 1;
+            //         localStorage.setItem('siteVisitCount', count);
+            //     }
+                
+            //     // 格式化数字显示
+            //     countElement.textContent = count.toLocaleString();
+            // }
+            
+            // // 更新访问统计
+            // updateVisitCount();
+            
+            // 点击外部关闭背景面板
+            document.addEventListener('click', function(e) {
+                if (!bgPanel.contains(e.target) && !bgToggle.contains(e.target)) {
+                    bgPanel.classList.remove('show');
+                }
+            });
+            
+            // 网站卡片悬停效果增强
+            const siteCards = document.querySelectorAll('.site-card');
+            siteCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.site-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1)';
+                        icon.style.borderColor = 'var(--primary-color)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.site-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1)';
+                        icon.style.borderColor = 'rgba(106, 137, 204, 0.2)';
+                    }
+                });
+            });
+            
+            // 移动端优化
+            function handleResize() {
+                if (window.innerWidth <= 1024) {
+                    // 移动端自动展开当前激活的分类
+                    const activeCategory = document.querySelector('.nav-category.active');
+                    if (activeCategory) {
+                        const subitems = activeCategory.querySelector('.nav-subitems');
+                        if (subitems) {
+                            subitems.style.display = 'block';
+                        }
+                    }
+                }
+            }
+            
+            // 初始检查和窗口大小变化监听
+            handleResize();
+            window.addEventListener('resize', handleResize);
+            
+            // 背景图片动画效果
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            document.addEventListener('mousemove', function(e) {
+                mouseX = (e.clientX / window.innerWidth) * 20 - 10;
+                mouseY = (e.clientY / window.innerHeight) * 20 - 10;
+            });
+            
+            function animateBackground() {
+                siteBackground.style.transform = `translate(${mouseX * 0.3}px, ${mouseY * 0.3}px) scale(1.05)`;
+                requestAnimationFrame(animateBackground);
+            }
+            
+            animateBackground();
+            
+            // 子导航点击
+            const navSubitems = document.querySelectorAll('.nav-subitems a');
+            navSubitems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    const section = document.getElementById(sectionId);
+                    
+                    if (section) {
+                        section.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+   <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-chat-seven.vercel.app/',
+    });
+  </script> 
+</body>
 </html>
