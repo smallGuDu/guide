@@ -658,6 +658,113 @@ html, body {
     opacity: 1 !important;
     box-shadow: 0 5px 15px rgba(106, 137, 204, 0.4) !important;
 }
+        /* =========================
+   📱 Mobile Pro UI Upgrade
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* 整体改成 App 流式布局 */
+    body {
+        background: #f5f6f8;
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+    /* 侧边栏 → 抽屉隐藏 */
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        z-index: 9999;
+        transition: 0.3s ease;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    /* 内容区变 App 风格 */
+    .content-area {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* 顶栏压缩 */
+    .top-header {
+        height: 56px;
+        padding: 0 12px;
+    }
+
+    .logo-text p {
+        display: none;
+    }
+}
+        @media (max-width: 768px) {
+
+    .sites-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .site-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .site-card-header {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .site-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px; /* App风格 */
+    }
+
+    .site-name {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .site-desc {
+        font-size: 12px;
+        color: #888;
+    }
+}
+        .mobile-menu-btn {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+        .site-card {
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.site-card:active {
+    transform: scale(0.98);
+}
     </style>
 </head>
 <body>
@@ -863,7 +970,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </a>
             </div>
-            
+            <div class="mobile-menu-btn" id="menuBtn">
+    <i class="fas fa-bars"></i>
+</div>
             <div class="header-links">
                 <a href="https://space.bilibili.com/1496054034" target="_blank" class="header-link">
                     <i class="fab fa-bilibili"></i> B站
@@ -2720,5 +2829,22 @@ if (collapseBtn) {
       serverURL: 'https://waline-chat-seven.vercel.app/',
     });
   </script> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("menuBtn");
+    const sidebar = document.querySelector(".sidebar");
+
+    btn.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+    });
+
+    // 点击空白关闭
+    document.addEventListener("click", function (e) {
+        if (!sidebar.contains(e.target) && !btn.contains(e.target)) {
+            sidebar.classList.remove("open");
+        }
+    });
+});
+    </script>
 </body>
 </html>
