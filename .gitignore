@@ -1,0 +1,7 @@
+# 在项目根目录创建 .gitignore 文件
+echo "# Visual Studio" > .gitignore
+echo ".vs/" >> .gitignore
+echo "*.suo" >> .gitignore
+echo "*.user" >> .gitignore
+echo "*.sln.docstates" >> .gitignore
+
