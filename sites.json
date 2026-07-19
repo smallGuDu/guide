@@ -1,0 +1,644 @@
+{
+  "sections": [
+    {
+      "id": "my-sites",
+      "title": "我的网站",
+      "subtitle": "个人主页和博客",
+      "icon": "fas fa-home",
+      "sites": [
+        {
+          "name": "我的主页",
+          "desc": "个人主页展示",
+          "url": "http://www.soliar.top/",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": ["个人", "主页"]
+        },
+        {
+          "name": "我的博客",
+          "desc": "不经常发些文章",
+          "url": "http://blog.soliar.top/",
+          "icon": "http://blog.soliar.top/favicon/favicon-light-192.png",
+          "tags": ["博客", "文章"]
+        },
+        {
+          "name": "【新】Openlist盘",
+          "desc": "一个Openlist盘",
+          "url": "http://pan.soliar.top/",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": ["Openlist", "下载盘"]
+        },
+        {
+          "name": "【新】软件下载",
+          "desc": "将一些软件上传到蓝奏云等网盘以提高下载速度",
+          "url": "http://store.soliar.top/",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": ["下载器", "免费"]
+        },
+        {
+          "name": "【推荐】漫画聚搜",
+          "desc": "聚搜，能搜到各种网站的漫画",
+          "url": "https://soliar-mango-searchplus.hf.space/",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": ["极速", "聚搜"],
+          "style": "color: red;"
+        }
+      ]
+    },
+    {
+      "id": "links",
+      "title": "友情链接",
+      "subtitle": "加友链可以发邮件给我哦(3591743780@qq.com)",
+      "icon": "fas fa-search",
+      "sites": [
+        {
+          "name": "I Am I",
+          "desc": "永远相信美好的事情即将发生",
+          "url": "https://5ime.cn",
+          "icon": "https://cdn.jsdelivr.net/gh/5ime/img/avatar.jpg"
+        },
+        {
+          "name": "Galgame聚合搜索",
+          "desc": "Galgame 资源聚合搜索引擎",
+          "url": "https://www.searchgal.top/",
+          "icon": "https://www.searchgal.top/logo.svg",
+          "tags": ["聚合搜索", "GAL"],
+          "style": "color:red;"
+        },
+        {
+          "name": "MCOL",
+          "desc": "好用的多游戏联机工具",
+          "url": "https://mcol.ishxw.com/",
+          "icon": "https://mcol.ishxw.com/assets/mcol_MainICON-H7tZABOB.ico",
+          "tags": ["游戏", "联机"]
+        },
+        {
+          "name": "梓澪の妙妙屋",
+          "desc": "知名游戏资源盘",
+          "url": "http://zi0.cc/",
+          "icon": "https://i.iij.li/i/2024/02/65da00d5bf894.webp",
+          "tags": ["游戏资源", "网盘"]
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "title": "搜索引擎",
+      "subtitle": "有一个好的搜索引擎可以更快的找到资源哦",
+      "icon": "fas fa-search",
+      "sites": [
+        {
+          "name": "bing搜索",
+          "desc": "bing搜索",
+          "url": "https://bing.com/",
+          "icon": "https://cn.bing.com/sa/simg/favicon-trans-bg-blue-mg-png.png",
+          "tags": ["微软", "搜索"]
+        },
+        {
+          "name": "Yandex搜索",
+          "desc": "俄国的搜索引擎",
+          "url": "https://yandex.com/",
+          "icon": "https://yastatic.net/s3/home-static/_/nova/CXZ471pd.png",
+          "tags": ["Yandex", "搜索"]
+        }
+      ]
+    },
+    {
+      "id": "game-resources",
+      "title": "游戏资源",
+      "subtitle": "GAL游戏和其他游戏资源站点",
+      "icon": "fas fa-gamepad",
+      "sites": [
+        {
+          "name": "Galgame聚合搜索",
+          "desc": "Galgame 资源聚合搜索引擎",
+          "url": "https://www.searchgal.top/",
+          "icon": "https://www.searchgal.top/logo.svg",
+          "tags": ["聚合搜索", "GAL"],
+          "style": "color:red;"
+        },
+        {
+          "name": "梓澪の妙妙屋",
+          "desc": "知名游戏资源盘",
+          "url": "http://zi0.cc/",
+          "icon": "https://i.iij.li/i/2024/02/65da00d5bf894.webp",
+          "tags": ["游戏资源", "网盘"]
+        },
+        {
+          "name": "真红の小站",
+          "desc": "真红姐姐的gal小站",
+          "url": "https://www.shinnku.com/",
+          "icon": "https://www.shinnku.com/favicon.ico",
+          "tags": ["GAL", "游戏"]
+        },
+        {
+          "name": "初音的青葱",
+          "desc": "需要注册登录",
+          "url": "https://www.fufugal.com/",
+          "icon": "../assets/images/favicon.png",
+          "tags": ["需登录", "GAL"]
+        },
+        {
+          "name": "稻香GAL",
+          "desc": "无需登录",
+          "url": "https://inarigal.com/",
+          "icon": "../assets/images/favicon.png",
+          "tags": ["无需登录", "GAL"]
+        },
+        {
+          "name": "ACG嘤嘤怪",
+          "desc": "需登录",
+          "url": "https://acgyyg.ru/",
+          "icon": "../assets/images/favicon.png",
+          "tags": ["需登录", "ACG"]
+        },
+        {
+          "name": "GGbases",
+          "desc": "不需登录",
+          "url": "https://www.ggbases.com/",
+          "icon": "../assets/images/favicon.png",
+          "tags": ["无需登录", "游戏"]
+        },
+        {
+          "name": "绮梦ACG",
+          "desc": "不需登录",
+          "url": "https://game.acgs.one/",
+          "icon": "https://img.acgs.one/2025-11-02/OBsfoG1Ydr.webp",
+          "tags": ["无需登录", "ACG"]
+        },
+        {
+          "name": "Koyso",
+          "desc": "无需登录",
+          "url": "https://koyso.to/",
+          "icon": "../assets/images/logos/shejizhoukan.png",
+          "tags": ["无需登录", "游戏"]
+        },
+        {
+          "name": "鲲GAL",
+          "desc": "较为知名，无需登录",
+          "url": "https://www.kungal.com/",
+          "icon": "https://www.kungal.com/_ipx/_/favicon.webp",
+          "tags": ["无需登录", "GAL", "知名"]
+        },
+        {
+          "name": "莉斯坦ACG",
+          "desc": "无需登录",
+          "url": "https://www.limulu.moe/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["无需登录", "ACG"]
+        },
+        {
+          "name": "GAL图书馆",
+          "desc": "无需登录",
+          "url": "https://gallibrary.pw/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["无需登录", "GAL"]
+        },
+        {
+          "name": "Nysoure",
+          "desc": "无需登录",
+          "url": "https://res.nyne.dev/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["无需登录", "资源"]
+        },
+        {
+          "name": "青桔ACG",
+          "desc": "无需登录",
+          "url": "https://www.qingju.org/",
+          "icon": "https://www.qingju.org/wp-content/uploads/2025/02/a2623c222320250217222344.webp",
+          "tags": ["无需登录", "ACG"]
+        },
+        {
+          "name": "猫猫网盘",
+          "desc": "无需登录",
+          "url": "https://catcat.cloud/",
+          "icon": "https://image.catcat.blog/catcat/2023/10/15/favicon.webp",
+          "tags": ["无需登录", "网盘"]
+        },
+        {
+          "name": "喵源领域",
+          "desc": "需登录",
+          "url": "https://www.nyantaku.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["需登录"]
+        },
+        {
+          "name": "绅士天堂",
+          "desc": "需登录",
+          "url": "https://www.chgal.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["需登录"]
+        },
+        {
+          "name": "未知云盘",
+          "desc": "无需登录",
+          "url": "https://www.nullcloud.top/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["无需登录", "网盘"]
+        },
+        {
+          "name": "05の资源小站",
+          "desc": "无需登录",
+          "url": "https://05fx.022016.xyz/",
+          "icon": "https://s1.ax1x.com/2023/04/07/ppTiFpQ.png",
+          "tags": ["无需登录", "资源"]
+        },
+        {
+          "name": "Touchgal",
+          "desc": "需登录",
+          "url": "https://www.touchgal.us/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["需登录", "GAL"]
+        },
+        {
+          "name": "紫缘社",
+          "desc": "无需登录",
+          "url": "https://galzy.eu.org/",
+          "icon": "https://galzy.eu.org/favicon.ico",
+          "tags": ["无需登录", "GAL"]
+        },
+        {
+          "name": "Galgamex",
+          "desc": "无需登录",
+          "url": "https://www.galgamex.net/",
+          "icon": "https://www.galgamex.net/_next/image?url=%2Ffavicon.webp&w=32&q=75",
+          "tags": ["无需登录", "GAL"]
+        },
+        {
+          "name": "量子ACG",
+          "desc": "无需登录",
+          "url": "https://lzacg.cc/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["无需登录", "ACG"]
+        }
+      ]
+    },
+    {
+      "id": "anime-resources",
+      "title": "动漫资源（全年龄）",
+      "subtitle": "全年龄向动漫观看网站",
+      "icon": "fas fa-film",
+      "sites": [
+        {
+          "name": "樱花动漫",
+          "desc": "真假樱花网站",
+          "url": "https://www.yhmb.cc/index.html",
+          "icon": "https://www.yhmb.cc/data/uploadFile/PnuFdF1751091562370877.png",
+          "tags": ["动漫", "观看"]
+        },
+        {
+          "name": "风车动漫",
+          "desc": "动漫观看网站",
+          "url": "http://www.fengche.one/",
+          "icon": "https://www.fengche.one/template/a_0001/images/favicon.png",
+          "tags": ["动漫", "观看"]
+        },
+        {
+          "name": "番茄动漫",
+          "desc": "动漫观看网站",
+          "url": "https://www.fqdm.cc/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["动漫", "观看"]
+        },
+        {
+          "name": "动漫",
+          "desc": "动漫观看网站",
+          "url": "https://www.jibi.cc/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["动漫", "观看"]
+        },
+        {
+          "name": "囧次元",
+          "desc": "动漫观看网站",
+          "url": "https://www.jcy23.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["动漫", "观看"]
+        },
+        {
+          "name": "次元城动漫",
+          "desc": "感觉不错的一个",
+          "url": "https://www.cycani.org/",
+          "icon": "https://www.cycani.org/upload/site/20240319-1/23324d2df3da86834984e523293636cf.png",
+          "tags": ["动漫", "观看"]
+        }
+      ]
+    },
+    {
+      "id": "nsfw-anime",
+      "title": "里番",
+      "subtitle": "里番内容站点",
+      "icon": "fas fa-exclamation-triangle",
+      "sites": [
+        {
+          "name": "ACG漫画网",
+          "desc": "里番内容",
+          "url": "https://acgmhn.com/hanime/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "Omofun",
+          "desc": "里番内容",
+          "url": "https://omofun111.top/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "AGE动漫",
+          "desc": "里番内容",
+          "url": "https://www.agedm.io/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "Haninme",
+          "desc": "很多mmd，但是要梯子",
+          "url": "https://hanime1.me/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "Hentaimama",
+          "desc": "梯子",
+          "url": "https://hentaimama.io/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "没名字",
+          "desc": "梯子",
+          "url": "https://tube.hentaistream.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["里番", "动漫"]
+        }
+      ]
+    },
+    {
+      "id": "acg-sites",
+      "title": "ACG网站",
+      "subtitle": "动漫游戏社区和Wiki",
+      "icon": "fas fa-globe-asia",
+      "sites": [
+        {
+          "name": "Bangumi",
+          "desc": "知名番剧wiki网站",
+          "url": "https://bangumi.tv/",
+          "icon": "https://lain.bgm.tv/pic/user/l/icon.jpg",
+          "tags": ["Wiki", "番剧", "社区"]
+        },
+        {
+          "name": "萌娘百科",
+          "desc": "国内知名ACG-wiki网站",
+          "url": "https://mzh.moegirl.org.cn/",
+          "icon": "https://img.moegirl.org.cn/favicon.ico",
+          "tags": ["Wiki", "百科", "ACG"]
+        }
+      ]
+    },
+    {
+      "id": "comics",
+      "title": "漫画",
+      "subtitle": "漫画内容站点",
+      "icon": "fas fa-book",
+      "sites": [
+        {
+          "name": "JM天堂(发布页)",
+          "desc": "可能需要梯子，里面有直连线路",
+          "url": "https://jmcomiced.org",
+          "icon": "https://jmcomiced.org/favicon.ico?v=2",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "JM天堂(永久页)",
+          "desc": "梯子",
+          "url": "https://18comic.vip/",
+          "icon": "https://18comic.vip/favicon.ico",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "哔咔漫画",
+          "desc": "梯子",
+          "url": "https://bkmh.me/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "E站",
+          "desc": "知名漫画平台（要梯子）",
+          "url": "https://e-hentai.org/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "E站（软件）",
+          "desc": "这是一个 E-Hentai Android 平台的浏览器。",
+          "url": "https://github.com/xiaojieonly/Ehviewer_CN_SXJ/releases",
+          "icon": "https://raw.githubusercontent.com/xiaojieonly/Ehviewer_CN_SXJ/BiLi_PC_Gamer/fastlane/metadata/android/en-US/images/icon.png",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "喜漫漫画",
+          "desc": "韩漫多一点",
+          "url": "https://www.favcomic.net/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "PIXIV（主站）",
+          "desc": "知名插画日本插画平台",
+          "url": "https://www.pixiv.net/",
+          "icon": "https://www.pixiv.net/favicon20250122.ico",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "Shaft",
+          "desc": "Pixiv 第三方客户端（支持直连）",
+          "url": "https://github.com/CeuiLiSA/Pixiv-Shaft",
+          "icon": "https://www.pixiv.net/favicon20250122.ico",
+          "tags": ["漫画"]
+        }
+      ]
+    },
+    {
+      "id": "novels",
+      "title": "黄文",
+      "subtitle": "黄文网站",
+      "icon": "fas fa-video",
+      "sites": [
+        {
+          "name": "PIXIV（主站）",
+          "desc": "P站（pixiv）有很多好看的小说",
+          "url": "https://www.pixiv.net/",
+          "icon": "https://www.pixiv.net/favicon20250122.ico",
+          "tags": ["漫画"]
+        },
+        {
+          "name": "肉文屋",
+          "desc": "没用过",
+          "url": "https://www.rouwenwu.in/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["漫画"]
+        }
+      ]
+    },
+    {
+      "id": "videos",
+      "title": "视频",
+      "subtitle": "视频分享平台",
+      "icon": "fas fa-video",
+      "sites": [
+        {
+          "name": "Pornhub",
+          "desc": "太知名了（需要梯子）",
+          "url": "https://pornhub.com/",
+          "icon": "https://ei.phncdn.com/www-static/favicon.ico?cache=2025122301",
+          "tags": ["R18", "视频"]
+        },
+        {
+          "name": "Xvideos",
+          "desc": "算知名吧，日本的（需要梯子）",
+          "url": "https://www.xvideos.com/",
+          "icon": "https://static-cdn77.xvideos-cdn.com/v3/img/skins/default/logo/xv.black.svg",
+          "tags": ["R18", "视频"]
+        },
+        {
+          "name": "X(推特)",
+          "desc": "记得年满18岁哦",
+          "url": "https://x.com",
+          "icon": "https://abs.twimg.com/favicons/twitter.3.ico",
+          "tags": ["R18", "视频"]
+        },
+        {
+          "name": "91",
+          "desc": "过于知名",
+          "url": "https://91porn.com/",
+          "icon": "https://91porn.com/favicon.ico",
+          "tags": ["R18", "视频"]
+        },
+        {
+          "name": "不良研究所",
+          "desc": "这个网站里很多广告，建议电脑访问",
+          "url": "https://buliangdh.vip/",
+          "icon": "https://buliangdh.vip/favicon.ico",
+          "tags": ["R18", "视频", "导航"]
+        },
+        {
+          "name": "海角",
+          "desc": "知名，需要加速器",
+          "url": "https://haijiao.com/home",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["R18", "视频"]
+        }
+      ]
+    },
+    {
+      "id": "asmr",
+      "title": "ASMR",
+      "subtitle": "ASMR专区唔",
+      "icon": "fas fa-wifi",
+      "sites": [
+        {
+          "name": "玖黎ACG",
+          "desc": "一个免费分享Gal,Cos,Asmr的网站",
+          "url": "https://jiuliacg.com/",
+          "icon": "https://img.alicdn.com/imgextra/i4/2201716776317/O1CN01kwy3QY1wXF2tUVkUx_!!2201716776317.webp",
+          "tags": ["ASMR", "ACG"]
+        }
+      ]
+    },
+    {
+      "id": "vpn",
+      "title": "免费网络工具",
+      "subtitle": "网络访问工具",
+      "icon": "fas fa-wifi",
+      "sites": [
+        {
+          "name": "Clash（网络工具）",
+          "desc": "网络工具软件",
+          "url": "https://www.clashverge.dev/",
+          "icon": "https://www.clashverge.dev/assets/logo.png",
+          "tags": ["工具", "软件"]
+        },
+        {
+          "name": "clashnodes（提供链接）",
+          "desc": "网络工具链接提供",
+          "url": "https://clashnodes.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["工具", "链接"]
+        },
+        {
+          "name": "clashstair（提供链接）",
+          "desc": "网络工具链接提供",
+          "url": "https://clashstair.com/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["工具", "链接"]
+        },
+        {
+          "name": "freeclashnode（提供链接）",
+          "desc": "网络工具链接提供",
+          "url": "https://www.freeclashnode.com/free-node/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["工具", "链接"]
+        },
+        {
+          "name": "nodefree（提供链接）",
+          "desc": "网络工具链接提供",
+          "url": "https://nodefree.me/",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["工具", "链接"]
+        }
+      ]
+    },
+    {
+      "id": "paid-vpn",
+      "title": "付费网络服务",
+      "subtitle": "付费网络服务",
+      "icon": "fas fa-crown",
+      "sites": [
+        {
+          "name": "从雨云",
+          "desc": "特殊网络服务",
+          "url": "https://congyu.moe/auth/register?invite=3928a34c25",
+          "icon": "https://congyu.moe/_next/static/media/murasame.724033df.svg",
+          "tags": ["付费", "网络"]
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "title": "TG群",
+      "subtitle": "<a href=\"https://www.ermao.net/blog/telegram/\">必看！telegram使用教程</a>",
+      "icon": "fas fa-telegram",
+      "sites": [
+        {
+          "name": "黄油联盟",
+          "desc": "很多黄油",
+          "url": "https://t.me/ButterLeague",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["黄油", "R18"]
+        },
+        {
+          "name": "极搜",
+          "desc": "tg搜索机器人",
+          "url": "https://t.me/sososo",
+          "icon": "../assets/images/logos/eleduck.png",
+          "tags": ["搜索", "视频"]
+        }
+      ]
+    },
+    {
+      "id": "zaluan",
+      "title": "杂物",
+      "subtitle": "什么都有w",
+      "icon": "fas fa-telegram",
+      "sites": [
+        {
+          "name": "南娘好物",
+          "desc": "小南娘好物推荐",
+          "url": "https://nnhaowu.com/",
+          "icon": "https://nnhaowu.com/favicon.png",
+          "tags": ["南娘", "好物推荐"]
+        }
+      ]
+    }
+  ]
+}
