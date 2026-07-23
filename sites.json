@@ -21,20 +21,6 @@
           "tags": ["博客", "文章"]
         },
         {
-          "name": "【新】Openlist盘",
-          "desc": "一个Openlist盘",
-          "url": "http://pan.soliar.top/",
-          "icon": "http://www.soliar.top/head.png",
-          "tags": ["Openlist", "下载盘"]
-        },
-        {
-          "name": "【新】软件下载",
-          "desc": "将一些软件上传到蓝奏云等网盘以提高下载速度",
-          "url": "http://store.soliar.top/",
-          "icon": "http://www.soliar.top/head.png",
-          "tags": ["下载器", "免费"]
-        },
-        {
           "name": "【推荐】漫画聚搜",
           "desc": "聚搜，能搜到各种网站的漫画",
           "url": "https://soliar-mango-searchplus.hf.space/",
@@ -369,6 +355,55 @@
           "url": "https://tube.hentaistream.com/",
           "icon": "../assets/images/logos/eleduck.png",
           "tags": ["里番", "动漫"]
+        },
+        {
+          "name": "Rule34Video",
+          "desc": "英文免费3D动画网站",
+          "url": "https://rule34video.com",
+          "icon": "https://www.faviconextractor.com/favicon/rule34video.com",
+          "tags": ["里番", "3D", "英文"]
+        },
+        {
+          "name": "Hentai.tv",
+          "desc": "英文免费的动漫网站",
+          "url": "https://hentai.tv",
+          "icon": "https://www.faviconextractor.com/favicon/hentai.tv",
+          "tags": ["里番", "英文", "在线"]
+        },
+        {
+          "name": "AnimeIDHentai",
+          "desc": "英文免费的动漫网站",
+          "url": "https://animeidhentai.com",
+          "icon": "https://www.faviconextractor.com/favicon/animeidhentai.com",
+          "tags": ["里番", "英文", "在线"]
+        },
+        {
+          "name": "3dhentai.it.com",
+          "desc": "英文 3D Hentai 动漫网站",
+          "url": "https://3dhentai.it.com",
+          "icon": "https://www.faviconextractor.com/favicon/3dhentai.it.com",
+          "tags": ["里番", "3D", "英文"]
+        },
+        {
+          "name": "E-Hentai Play",
+          "desc": "英文在线视频站",
+          "url": "https://e-hentaiplay.com",
+          "icon": "https://www.faviconextractor.com/favicon/e-hentaiplay.com",
+          "tags": ["里番", "英文", "在线"]
+        },
+        {
+          "name": "HentaiCity",
+          "desc": "Free HD hentai porn videos, hot anime sex, naughty cartoons",
+          "url": "https://www.hentaicity.com",
+          "icon": "https://www.faviconextractor.com/favicon/www.hentaicity.com",
+          "tags": ["里番", "英文", "在线"]
+        },
+        {
+          "name": "Hanime.tv",
+          "desc": "拥有很棒的成人动漫内容可供浏览",
+          "url": "https://hanime.tv",
+          "icon": "https://www.faviconextractor.com/favicon/hanime.tv",
+          "tags": ["里番", "英文", "在线"]
         }
       ]
     },
@@ -455,6 +490,111 @@
           "url": "https://github.com/CeuiLiSA/Pixiv-Shaft",
           "icon": "https://www.pixiv.net/favicon20250122.ico",
           "tags": ["漫画"]
+        },
+        {
+          "name": "H漫畫",
+          "desc": "免费本子站",
+          "url": "https://joyacg.com",
+          "icon": "https://joyacg.com/android-chrome-192x192.png",
+          "tags": ["漫画", "本子"]
+        },
+        {
+          "name": "Hanime1.biz",
+          "desc": "在线漫画，每日更新免费中文H漫；同人H本子、A漫单行本。",
+          "url": "https://hanime1.biz",
+          "icon": "https://www.faviconextractor.com/favicon/hanime1.biz",
+          "tags": ["漫画", "本子"]
+        },
+        {
+          "name": "欲漫乐园",
+          "desc": "欢迎体验色漫天堂，ACG的禁忌乐园！",
+          "url": "https://www.sexacg.xyz",
+          "icon": "https://www.sexacg.xyz/template/conch/asset/img/favicon.png",
+          "tags": ["漫画", "R18"]
+        },
+        {
+          "name": "爱漫岛",
+          "desc": "超10万本中文汉化日本漫画和韩国漫画",
+          "url": "https://www.amdcomic.xyz",
+          "icon": "https://www.amdcomic.xyz/template/conch/asset/img/favicon.png",
+          "tags": ["漫画", "汉化"]
+        },
+        {
+          "name": "HentaiFox",
+          "desc": "英文生肉本子站",
+          "url": "https://hentaifox.com",
+          "icon": "https://www.faviconextractor.com/favicon/hentaifox.com",
+          "tags": ["漫画", "英文", "本子"]
+        },
+        {
+          "name": "Hentai18",
+          "desc": "英文生肉本子站",
+          "url": "https://hentai18.net",
+          "icon": "https://www.faviconextractor.com/favicon/hentai18.net",
+          "tags": ["漫画", "英文", "本子"]
+        },
+        {
+          "name": "Manhwa-raw",
+          "desc": "英文生肉本子站",
+          "url": "https://manhwa-raw.com",
+          "icon": "https://www.hentaidh.net/wp-content/uploads/2026/05/manhwa-raw.com.jpg",
+          "tags": ["漫画", "英文"]
+        },
+        {
+          "name": "搜漫",
+          "desc": "一站式漫画搜索引擎，连接全网多个漫画源",
+          "url": "https://www.hisoman.com",
+          "icon": "https://www.faviconextractor.com/favicon/www.hisoman.com",
+          "tags": ["漫画", "搜索"]
+        },
+        {
+          "name": "漫画柜",
+          "desc": "海量国产漫画、日韩漫画、欧美漫画资源",
+          "url": "https://www.manhuagui.com",
+          "icon": "https://www.faviconextractor.com/favicon/www.manhuagui.com",
+          "tags": ["漫画", "在线"]
+        },
+        {
+          "name": "Komiic",
+          "desc": "线上漫画平台，收录超过 7000 部漫画，每日更新",
+          "url": "https://komiic.com",
+          "icon": "https://www.faviconextractor.com/favicon/komiic.com",
+          "tags": ["漫画", "在线"]
+        },
+        {
+          "name": "MYCOMIC",
+          "desc": "我的漫画，海量中文化漫画每日更新",
+          "url": "https://mycomic.com",
+          "icon": "https://www.faviconextractor.com/favicon/mycomic.com",
+          "tags": ["漫画", "汉化"]
+        },
+        {
+          "name": "ExHentai",
+          "desc": "E站里站",
+          "url": "https://exhentai.org",
+          "icon": "https://www.faviconextractor.com/favicon/exhentai.org",
+          "tags": ["漫画", "里站"]
+        },
+        {
+          "name": "nHentai",
+          "desc": "英文免费在线本子站",
+          "url": "https://nhentai.net",
+          "icon": "https://www.faviconextractor.com/favicon/nhentai.net",
+          "tags": ["漫画", "英文", "本子"]
+        },
+        {
+          "name": "9Hentai",
+          "desc": "英文免费在线本子站",
+          "url": "https://9hentai.so",
+          "icon": "https://www.faviconextractor.com/favicon/9hentai.so",
+          "tags": ["漫画", "英文", "本子"]
+        },
+        {
+          "name": "HentaiRox",
+          "desc": "英文免费本子站",
+          "url": "https://hentairox.com",
+          "icon": "https://www.faviconextractor.com/favicon/hentairox.com",
+          "tags": ["漫画", "英文", "本子"]
         }
       ]
     },
