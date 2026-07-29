@@ -27,6 +27,13 @@
           "icon": "http://www.soliar.top/head.png",
           "tags": ["极速", "聚搜"],
           "style": "color: red;"
+        },{
+          "name": "【推荐】影视聚搜",
+          "desc": "成人内容密码:123456",
+          "url": "https://tv.soliar.top/",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": ["极速", "聚搜"],
+          "style": "color: red;"
         }
       ]
     },
