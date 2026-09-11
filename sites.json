@@ -70,6 +70,12 @@
           "url": "http://zi0.cc/",
           "icon": "https://i.iij.li/i/2024/02/65da00d5bf894.webp",
           "tags": ["游戏资源", "网盘"]
+        }, {
+          "name": "樱之歌SakuGAL",
+          "desc": "免费分享精选Galgame游戏资源",
+          "url": "https://sakugal.com/",
+          "icon": "https://sakugal.com/favicon.ico",
+          "tags": ["游戏资源"]
         }
       ]
     },
@@ -122,6 +128,12 @@
           "url": "https://www.shinnku.com/",
           "icon": "https://www.shinnku.com/favicon.ico",
           "tags": ["GAL", "游戏"]
+        },{
+          "name": "樱之歌SakuGAL",
+          "desc": "免费分享精选Galgame游戏资源",
+          "url": "https://sakugal.com/",
+          "icon": "https://sakugal.com/favicon.ico",
+          "tags": ["游戏资源"]
         },
         {
           "name": "初音的青葱",
