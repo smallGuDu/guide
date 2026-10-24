@@ -91,6 +91,17 @@
             "聚搜"
           ],
           "style": "color: red;"
+        },
+        {
+          "name": "【推荐】小说（黄文）聚搜",
+          "desc": "支持ai自己续写哦，支持在线阅读，热度搜索",
+          "url": "https://soliar-mango-searchplus.hf.space/novel",
+          "icon": "http://www.soliar.top/head.png",
+          "tags": [
+            "小说",
+            "聚搜"
+          ],
+          "style": "color: red;"
         }
       ]
     },
