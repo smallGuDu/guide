@@ -1834,6 +1834,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }).catch(function () {});
             } catch (e) { /* 忽略 */ }
         }
+        // 点击跳转逻辑在 IIFE 之外（全局作用域），这里把它挂到 window 上供其调用
+        window.recordVisit = recordVisit;
 
         /** 按访问量倒序，访问量相同时保持 sites.json 原有顺序（稳定排序） */
         function sortSitesByVisits(sites) {
