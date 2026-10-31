@@ -523,6 +523,7 @@ body {
     white-space: nowrap;      /* WebStack 经典单行截断 */
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-right: 48px;      /* 给右上角访问量角标留出空间 */
 }
 
 .site-tags { display: none; } /* WebStack 通常不显示Tag，为了极致干净这里隐藏 */
@@ -1203,6 +1204,50 @@ html, body {
     color: #94a3b8;
 }
 
+/* ================== 访问量角标 ================== */
+/* 只在访问量 > 0 时渲染，避免满屏 0 次显得杂乱 */
+.visit-count {
+    position: absolute;
+    top: 27px;
+    right: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    line-height: 1;
+    padding: 3px 6px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+    background: rgba(50, 115, 220, 0.1);
+    color: #3273dc;
+}
+
+.visit-count i {
+    font-size: 9px;
+    opacity: 0.75;
+}
+
+/* 访问量较高时稍微提亮 */
+.visit-count.visit-hot {
+    background: rgba(239, 68, 68, 0.12);
+    color: #e05353;
+}
+
+@media (max-width: 768px) {
+    .visit-count {
+        top: 24px;
+        right: 6px;
+        font-size: 9px;
+        padding: 2px 5px;
+    }
+}
+
 @media (max-width: 768px) {
     .ping-badge {
         font-size: 9px;
@@ -1741,6 +1786,78 @@ document.addEventListener('DOMContentLoaded', function() {
                 .replace(/"/g, '&' + 'quot;');
         }
 
+        // ================== 访问量统计 ==================
+        // 计数服务跑在腾讯云服务器上（只做统计与上报，站点本身仍是纯静态）。
+        // 若服务地址有变，改下面 COUNTER.api 即可；改成 '' 则整体关闭统计。
+        var COUNTER = {
+            api: 'https://acg.soliar.top:8443/counter',
+            // 是否让「热门网站」分组也按访问量排序；false 则保持 sites.json 手写顺序
+            sortFeatured: true,
+            // 拉取访问量的超时（毫秒），超时就按原始顺序渲染，绝不阻塞页面
+            timeout: 2500
+        };
+
+        // url -> 访问量
+        var visitCounts = {};
+
+        /** 拉取一批网址的访问量，失败/超时一律静默降级 */
+        function fetchVisitCounts(urls) {
+            if (!urls.length || !COUNTER.api) return Promise.resolve();
+            var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+            var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, COUNTER.timeout);
+            return fetch(COUNTER.api + '/counts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ urls: urls }),
+                signal: ctrl ? ctrl.signal : undefined
+            })
+                .then(function (res) { return res.ok ? res.json() : null; })
+                .then(function (data) {
+                    if (!data || !data.counts) return;
+                    Object.keys(data.counts).forEach(function (k) {
+                        visitCounts[k] = data.counts[k] || 0;
+                    });
+                })
+                .catch(function () { /* 计数服务不可用时不影响导航站 */ })
+                .then(function () { clearTimeout(timer); });
+        }
+
+        /** 记录一次访问，失败静默 */
+        function recordVisit(url) {
+            if (!url || !COUNTER.api) return;
+            try {
+                fetch(COUNTER.api + '/hit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url }),
+                    keepalive: true
+                }).catch(function () {});
+            } catch (e) { /* 忽略 */ }
+        }
+
+        /** 按访问量倒序，访问量相同时保持 sites.json 原有顺序（稳定排序） */
+        function sortSitesByVisits(sites) {
+            return sites
+                .map(function (site, idx) { return { site: site, idx: idx }; })
+                .sort(function (a, b) {
+                    var ca = visitCounts[a.site.url] || 0;
+                    var cb = visitCounts[b.site.url] || 0;
+                    if (cb !== ca) return cb - ca;
+                    return a.idx - b.idx;
+                })
+                .map(function (item) { return item.site; });
+        }
+
+        /** 访问量角标，0 次不显示 */
+        function visitBadgeHtml(url) {
+            var n = visitCounts[url] || 0;
+            if (n <= 0) return '';
+            var text = n >= 10000 ? (n / 10000).toFixed(1) + 'w' : String(n);
+            var hot = n >= 100 ? ' visit-hot' : '';
+            return '<span class="visit-count' + hot + '" title="累计访问 ' + n + ' 次">' +
+                '<i class="fas fa-eye"></i>' + text + '</span>';
+        }
+
         function buildNav(sections) {
             const ul = document.getElementById('navCategories');
             if (!ul) return;
@@ -1782,7 +1899,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 '</section>';
             main.innerHTML = adHtml + sections.map(function (sec) {
                 var isFeatured = sec.id === 'featured';
-                var cardsHtml = sec.sites.map(function (site, idx) {
+                // 按访问量排序（热门网站可选择保持手写顺序）
+                var ordered = (isFeatured && !COUNTER.sortFeatured)
+                    ? sec.sites
+                    : sortSitesByVisits(sec.sites);
+                var cardsHtml = ordered.map(function (site, idx) {
                     var nameStyle = site.style ? ' style="' + escapeHtml(site.style) + '"' : '';
                     var noticeAttr = site.notice ? ' data-notice="' + escapeHtml(site.notice) + '"' : '';
                     var rankHtml = isFeatured
@@ -1790,6 +1911,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         : '';
                     return '<div class="site-card' + (isFeatured ? ' featured-card' : '') + '" data-url="' + escapeHtml(site.url) + '"' + noticeAttr + '>' +
                         '<span class="ping-badge ping-loading" title="滚动到可见位置后自动测试延迟">--</span>' +
+                        visitBadgeHtml(site.url) +
                         '<div class="site-card-header">' +
                         rankHtml +
                         '<img src="' + escapeHtml(site.icon) + '" alt="' + escapeHtml(site.name) + '" class="site-icon">' +
@@ -1838,16 +1960,26 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(function (res) { return res.json(); })
             .then(function (data) {
                 var sections = data.sections || [];
-                // 热门网站：sites.json 顶部的 featured 数组，按数组顺序排列，置顶显示
+                // 热门网站：sites.json 顶部的 featured 数组，置顶显示
                 if (data.featured && data.featured.length) {
                     sections = [{
                         id: 'featured',
                         title: '热门网站',
-                        subtitle: '精选推荐，顺序可在 sites.json 的 featured 中调整',
+                        subtitle: '精选推荐，按访问量排序',
                         icon: 'fas fa-fire',
                         sites: data.featured
                     }].concat(sections);
                 }
+                // 先拉访问量再渲染（失败/超时则按 sites.json 原始顺序）
+                var allUrls = [];
+                sections.forEach(function (sec) {
+                    (sec.sites || []).forEach(function (s) {
+                        if (s && s.url) allUrls.push(s.url);
+                    });
+                });
+                return fetchVisitCounts(allUrls).then(function () { return sections; });
+            })
+            .then(function (sections) {
                 buildNav(sections);
                 buildContent(sections);
                 initNavInteraction();
@@ -2152,6 +2284,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         cancelBtn.addEventListener('click', close);
         okBtn.addEventListener('click', function () {
+            recordVisit(url);
             window.open(url, '_blank');
             close();
         });
@@ -2189,6 +2322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        recordVisit(url);
         window.open(url, '_blank');
     });
     </script>
