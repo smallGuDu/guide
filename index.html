@@ -2078,6 +2078,630 @@ html, body {
     @media (max-width: 768px) {
         .theme-toggle { width: 34px; height: 34px; flex-basis: 34px; font-size: .86rem; }
     }
+
+    /* =========================================================
+       SearchGal 风格主题 · 艳粉 × 石板灰
+       配色/圆角/字体参照 searchgal.top 的设计语言
+       ========================================================= */
+    :root {
+        --sg-brand: #ff1493;
+        --sg-brand-soft: #ff69b4;
+        --sg-purple: #d946ef;
+        --radius: 16px;
+        --radius-sm: 11px;
+    }
+
+    /* ---------- 字体 ---------- */
+    body, .logo-text h1, .section-title, .site-name, .nav-category > a,
+    .announcement-content, .main-footer, .search-input, .about-btn {
+        font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC",
+            "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+    }
+
+    /* ---------- 暗色（默认） ---------- */
+    :root {
+        --primary-color: #e2e8f0;
+        --primary-light: #ff69b4;
+        --accent-color: #ff1493;
+        --text-color: #e2e8f0;
+        --text-light: #94a3b8;
+        --bg-color: #0f172a;
+        --card-bg: rgba(30, 41, 59, .72);
+        --sidebar-bg: rgba(15, 23, 42, .8);
+        --border-color: rgba(148, 163, 184, .18);
+        --shadow-hover: 0 18px 40px -18px rgba(255, 20, 147, .45);
+    }
+
+    html { background: #0f172a; }
+
+    body {
+        color: #e2e8f0;
+        background:
+            radial-gradient(ellipse at 20% 30%, rgba(255, 20, 147, .10) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 70%, rgba(168, 85, 247, .08) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, .06) 0%, transparent 60%),
+            linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        background-attachment: fixed;
+        min-height: 100vh;
+        animation: sgFadeIn .4s ease-out both;
+    }
+
+    @keyframes sgFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* 背景纹理层：与 searchgal.top 完全相同的 SVG 纹样（暗色 #ff69b4 / 0.015） */
+    body::before {
+        opacity: .3;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23ff69b4' fill-opacity='0.015' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l-2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 192px 192px;
+        background-position: center;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+
+    /* 去掉原来的同心圆装饰 */
+    body::after { display: none; }
+
+    /* ---------- 顶栏 ---------- */
+    .top-header {
+        background: rgba(15, 23, 42, .72);
+        border-bottom-color: rgba(148, 163, 184, .16);
+        box-shadow: 0 8px 28px rgba(2, 6, 23, .5);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .logo-text h1 { color: #e2e8f0; }
+    .logo-text p { color: #94a3b8; }
+
+    .header-search {
+        background: rgba(30, 41, 59, .78);
+        border-color: rgba(148, 163, 184, .2);
+    }
+    .header-search .search-input { color: #e2e8f0; }
+    .header-search .search-input::placeholder { color: #64748b; }
+    .header-search .search-icon { color: #94a3b8; }
+    .header-search:focus-within {
+        border-color: rgba(255, 20, 147, .6);
+        background: rgba(30, 41, 59, .95);
+        box-shadow: 0 0 0 3px rgba(255, 20, 147, .16);
+    }
+
+    .header-links a { color: #94a3b8; }
+    .header-links a:hover { color: #ff1493; }
+
+    .theme-toggle {
+        color: #cbd5e1;
+        background: rgba(148, 163, 184, .1);
+        border-color: rgba(148, 163, 184, .2);
+    }
+    .theme-toggle:hover { color: #fff; background: rgba(255, 20, 147, .22); }
+
+    /* ---------- 公告 ---------- */
+    .announcement-bar {
+        background: rgba(30, 41, 59, .55);
+        border-bottom-color: rgba(148, 163, 184, .14);
+    }
+    .announcement-line, .announcement-content { color: #94a3b8; }
+    .announcement-lead { color: #e2e8f0; }
+    .announcement-content a { color: #ff69b4; }
+    .announcement-warn { color: #fb7185; }
+    .announcement-note { color: #94a3b8; }
+
+    /* ---------- 侧边栏 ---------- */
+    .sidebar {
+        background: rgba(15, 23, 42, .8);
+        border-color: rgba(148, 163, 184, .16);
+    }
+    .sidebar-header h2 { color: #e2e8f0; }
+    .sidebar-header { border-bottom-color: rgba(148, 163, 184, .14); }
+    .nav-category > a { color: #94a3b8; }
+    .nav-category > a:hover { color: #fff; background: rgba(255, 20, 147, .1); }
+    .nav-category.active > a {
+        color: #ff69b4;
+        background: linear-gradient(90deg, rgba(255, 20, 147, .18), rgba(255, 20, 147, .02));
+    }
+    .nav-category > a i:first-child { color: #64748b; }
+    .nav-category > a:hover i:first-child,
+    .nav-category.active > a i:first-child { color: #ff1493; }
+
+    .visit-stats { color: #94a3b8; border-top-color: rgba(148, 163, 184, .14); }
+    .about-link { border-top-color: rgba(148, 163, 184, .14); }
+    .about-btn { color: #cbd5e1; }
+    .about-btn:hover { color: #ff1493; }
+
+    /* ---------- 分区标题 ---------- */
+    .section-title { color: #e2e8f0; }
+    .section-subtitle { color: #64748b; }
+    .section-icon { background: rgba(255, 20, 147, .14); color: #ff69b4; }
+
+    /* ---------- 站点卡片 ---------- */
+    .site-card {
+        background: rgba(30, 41, 59, .72);
+        border-color: rgba(148, 163, 184, .18);
+        border-radius: var(--radius);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+    .site-card::after {
+        background: linear-gradient(90deg, transparent, rgba(255, 20, 147, .55), transparent);
+    }
+    .site-card:hover {
+        border-color: rgba(255, 20, 147, .55);
+        box-shadow: 0 18px 40px -18px rgba(255, 20, 147, .5);
+    }
+
+    .site-icon { border-color: rgba(148, 163, 184, .3); box-shadow: 0 0 14px rgba(255, 20, 147, .14); }
+    .site-name { color: #f1f5f9; }
+    .site-desc { color: #94a3b8; }
+
+    .ping-badge { background: rgba(148, 163, 184, .14); color: #94a3b8; }
+    .visit-count { background: rgba(255, 20, 147, .14); color: #ff69b4; }
+    .visit-count.visit-hot { background: rgba(255, 20, 147, .22); color: #ff8fc0; }
+
+    /* ---------- 热门网站 ---------- */
+    .section.featured-section {
+        background: linear-gradient(135deg, rgba(30, 41, 59, .9), rgba(15, 23, 42, .9));
+        border-color: rgba(255, 20, 147, .26);
+        border-radius: 22px;
+        box-shadow: 0 20px 50px rgba(2, 6, 23, .5), inset 0 1px 0 rgba(255, 255, 255, .04);
+    }
+    .section.featured-section::before {
+        background: radial-gradient(circle, rgba(255, 20, 147, .18), transparent 65%);
+    }
+    .section.featured-section::after {
+        content: "✦ 精选推荐";
+        color: rgba(255, 105, 180, .7);
+    }
+    .section.featured-section .section-icon {
+        background: linear-gradient(135deg, #ff1493, #d946ef);
+        color: #fff;
+    }
+    .section.featured-section .section-title::after {
+        background: linear-gradient(135deg, #ff1493, #d946ef);
+    }
+    .featured-card {
+        background: linear-gradient(135deg, rgba(49, 46, 78, .8), rgba(30, 41, 59, .9));
+        border-color: rgba(255, 20, 147, .22);
+    }
+    .featured-card:hover { border-color: rgba(255, 20, 147, .7); }
+
+    .hot-rank {
+        background: linear-gradient(135deg, #ff1493, #ff69b4);
+        box-shadow: 0 4px 14px rgba(255, 20, 147, .38);
+    }
+    .hot-rank.rank-1 { background: linear-gradient(135deg, #ff1493, #ff5fa2); }
+    .hot-rank.rank-2 { background: linear-gradient(135deg, #ff69b4, #ff8fc0); }
+    .hot-rank.rank-3 { background: linear-gradient(135deg, #d946ef, #e879f9); }
+    .hot-rank.rank-4 { background: linear-gradient(135deg, #a855f7, #c084fc); }
+
+    /* ---------- 页脚 ---------- */
+    .main-footer {
+        background: rgba(8, 13, 29, .55);
+        color: #7f89ac;
+        border-top-color: rgba(148, 163, 184, .14);
+    }
+    .main-footer a { color: #ff69b4; }
+
+    /* ---------- 滚动条 / 选中高亮 ---------- */
+    ::-webkit-scrollbar { width: 12px; height: 12px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, .5); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff1493 0%, #ff69b4 50%, #d946ef 100%);
+        border-radius: 10px;
+        border: 2px solid rgba(15, 23, 42, .6);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff69b4 0%, #ff1493 50%, #e879f9 100%);
+    }
+    ::selection { background: rgba(255, 20, 147, .35); color: #fff; }
+
+    /* =========================================================
+       浅色模式
+       ========================================================= */
+    body.light-theme {
+        --primary-color: #1d1b1e;
+        --text-color: #1d1b1e;
+        --text-light: #64748b;
+        --bg-color: #f8fafc;
+        --card-bg: rgba(255, 255, 255, .86);
+        --sidebar-bg: rgba(255, 255, 255, .82);
+        --border-color: rgba(148, 163, 184, .28);
+        --accent-color: #ff1493;
+        color: #1d1b1e;
+        background:
+            radial-gradient(ellipse at 20% 30%, rgba(255, 20, 147, .15) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 70%, rgba(168, 85, 247, .12) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, .1) 0%, transparent 60%),
+            linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        background-attachment: fixed;
+    }
+
+    body.light-theme::before {
+        opacity: .4;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23ff1493' fill-opacity='0.02' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l-2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    body.light-theme .top-header {
+        background: rgba(255, 255, 255, .8);
+        border-bottom-color: rgba(148, 163, 184, .22);
+        box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+    }
+    body.light-theme .logo-text h1 { color: #1d1b1e; }
+    body.light-theme .logo-text p { color: #64748b; }
+    body.light-theme .header-search {
+        background: rgba(255, 255, 255, .85);
+        border-color: rgba(148, 163, 184, .3);
+    }
+    body.light-theme .header-search .search-input { color: #1d1b1e; }
+    body.light-theme .header-search .search-input::placeholder { color: #94a3b8; }
+    body.light-theme .header-search:focus-within {
+        border-color: rgba(255, 20, 147, .55);
+        box-shadow: 0 0 0 3px rgba(255, 20, 147, .12);
+    }
+    body.light-theme .header-links a { color: #64748b; }
+    body.light-theme .header-links a:hover { color: #ff1493; }
+    body.light-theme .theme-toggle {
+        color: #475569;
+        background: rgba(148, 163, 184, .12);
+        border-color: rgba(148, 163, 184, .24);
+    }
+    body.light-theme .theme-toggle:hover { color: #ff1493; background: rgba(255, 20, 147, .1); }
+
+    body.light-theme .announcement-bar {
+        background: rgba(255, 255, 255, .6);
+        border-bottom-color: rgba(148, 163, 184, .2);
+    }
+    body.light-theme .announcement-line,
+    body.light-theme .announcement-content { color: #64748b; }
+    body.light-theme .announcement-lead { color: #1d1b1e; }
+    body.light-theme .announcement-content a { color: #ff1493; }
+    body.light-theme .announcement-warn { color: #e11d48; }
+    body.light-theme .announcement-note { color: #64748b; }
+
+    body.light-theme .sidebar {
+        background: rgba(255, 255, 255, .85);
+        border-color: rgba(148, 163, 184, .22);
+    }
+    body.light-theme .sidebar-header h2 { color: #1d1b1e; }
+    body.light-theme .nav-category > a { color: #64748b; }
+    body.light-theme .nav-category > a:hover { color: #1d1b1e; background: rgba(255, 20, 147, .07); }
+    body.light-theme .nav-category.active > a {
+        color: #ff1493;
+        background: linear-gradient(90deg, rgba(255, 20, 147, .12), rgba(255, 255, 255, .2));
+    }
+    body.light-theme .visit-stats { color: #64748b; }
+    body.light-theme .about-btn { color: #475569; }
+    body.light-theme .about-btn:hover { color: #ff1493; }
+
+    body.light-theme .section-title { color: #1d1b1e; }
+    body.light-theme .section-subtitle { color: #94a3b8; }
+    body.light-theme .section-icon { background: rgba(255, 20, 147, .12); color: #ff1493; }
+
+    body.light-theme .site-card {
+        background: rgba(255, 255, 255, .9);
+        border-color: rgba(148, 163, 184, .26);
+    }
+    body.light-theme .site-card:hover {
+        border-color: rgba(255, 20, 147, .45);
+        box-shadow: 0 18px 36px -18px rgba(255, 20, 147, .32);
+    }
+    body.light-theme .site-name { color: #1d1b1e; }
+    body.light-theme .site-desc { color: #64748b; }
+    body.light-theme .ping-badge { background: rgba(148, 163, 184, .16); color: #64748b; }
+    body.light-theme .visit-count { background: rgba(255, 20, 147, .1); color: #e5177f; }
+    body.light-theme .visit-count.visit-hot { background: rgba(255, 20, 147, .16); color: #d6107a; }
+
+    body.light-theme .section.featured-section {
+        background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(248, 250, 252, .9));
+        border-color: rgba(255, 20, 147, .25);
+    }
+    body.light-theme .section.featured-section::after { color: rgba(255, 20, 147, .6); }
+    body.light-theme .featured-card {
+        background: #fff;
+        border-color: rgba(255, 20, 147, .2);
+    }
+    body.light-theme .main-footer {
+        background: rgba(255, 255, 255, .6);
+        color: #64748b;
+        border-top-color: rgba(148, 163, 184, .2);
+    }
+    body.light-theme .main-footer a { color: #ff1493; }
+
+    body.light-theme ::-webkit-scrollbar-track { background: rgba(226, 232, 240, .8); }
+    body.light-theme ::-webkit-scrollbar-thumb { border-color: rgba(255, 255, 255, .7); }
+    body.light-theme ::selection { background: rgba(255, 20, 147, .28); color: #1d1b1e; }
+
+    /* =========================================================
+       SearchGal 卡片复刻
+       依据其真实 DOM：
+       .friend-card = flex items-center gap-3 p-3 rounded-xl
+                      bg-slate-800/50 border-slate-700/50
+                      hover:border-theme-primary/30 hover:shadow-lg
+       外层 .glassmorphism-card = rounded-3xl shadow-xl p-6
+       ========================================================= */
+    :root {
+        --sg-primary: 255, 20, 147;      /* theme-primary  #ff1493 */
+        --sg-primary-light: 255, 105, 180; /* theme-primary-light #ff69b4 */
+        --sg-accent: 217, 70, 239;       /* theme-accent   #d946ef */
+    }
+
+    /* ---------- 分组容器 = glassmorphism-card ---------- */
+    .section {
+        background: rgba(30, 41, 59, .55);
+        border: 1px solid rgba(148, 163, 184, .16);
+        border-radius: 0;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 20px 25px -5px rgba(var(--sg-primary), .1),
+                    0 8px 10px -6px rgba(var(--sg-primary), .1);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+
+    @media (min-width: 640px) {
+        .section { border-radius: 1.5rem; padding: 1.5rem; }
+    }
+
+    /* 分组头部：图标紧贴标题（对应 SearchGal 在 h2 内联 svg + gap-2） */
+    .section-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 标题图标改成内联粉色（SearchGal 用 inline svg + gap-2） */
+    .section-icon {
+        width: auto;
+        height: auto;
+        background: none;
+        border: none;
+        border-radius: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(var(--sg-primary));
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: .2rem;
+    }
+
+    .section-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: rgb(var(--sg-primary));
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .section-subtitle { font-size: .75rem; color: #94a3b8; }
+
+    @media (min-width: 640px) {
+        .section-title { font-size: 1.25rem; }
+    }
+
+    /* ---------- 卡片网格 grid-cols-1 / sm:2 / lg:3 ---------- */
+    .sites-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .75rem;
+    }
+
+    @media (min-width: 640px) {
+        .sites-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    }
+
+    @media (min-width: 1024px) {
+        .sites-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    /* ---------- 站点卡片 = friend-card ---------- */
+    .site-card {
+        display: flex;
+        flex-direction: row;              /* 覆盖基类的 column：图标在左，文字在右 */
+        align-items: center;
+        gap: .75rem;
+        padding: .75rem;
+        border-radius: .9375rem;          /* rounded-xl */
+        background: rgba(30, 41, 59, .5);  /* dark:bg-slate-800/50 */
+        border: 1px solid rgba(51, 65, 85, .5); /* dark:border-slate-700/50 */
+        box-shadow: none;
+        transform: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: all .3s;
+    }
+
+    /* 去掉原有的装饰伪元素与位移 */
+    .site-card::before,
+    .site-card::after { content: none; display: none; }
+    .site-card:hover { transform: none; }
+    .site-card:active { transform: none; }
+
+    .site-card:hover {
+        border-color: rgba(var(--sg-primary), .3);
+        box-shadow: 0 10px 15px -3px rgba(var(--sg-primary), .1),
+                    0 4px 6px -4px rgba(var(--sg-primary), .1);
+    }
+
+    /* 让 img / info 直接成为卡片 flex 子项 */
+    .site-card-header { display: contents; }
+
+    .site-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: .75rem;            /* rounded-lg */
+        object-fit: cover;
+        background: #334155;              /* dark:bg-slate-700 */
+        border: none;
+        box-shadow: none;
+        flex-shrink: 0;
+    }
+
+    .site-info { flex: 1 1 auto; min-width: 0; padding: 0; }
+
+    .site-name {
+        font-size: .875rem;               /* text-sm */
+        font-weight: 700;                 /* font-bold */
+        line-height: 1.4;
+        color: #fff;
+        padding-right: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: color .3s;
+    }
+
+    .site-card:hover .site-name { color: rgb(var(--sg-primary-light)); }
+
+    .site-desc {
+        font-size: .75rem;                /* text-xs */
+        line-height: 1.5;
+        color: #94a3b8;                   /* dark:text-slate-400 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ---------- 延迟角标：改为卡片右侧行内小胶囊（SearchGal 卡片本无角标） ---------- */
+    .ping-badge {
+        position: static;
+        order: 10;
+        flex-shrink: 0;
+        font-size: 10px;
+        line-height: 1;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: rgba(148, 163, 184, .14);
+        color: #94a3b8;
+        border: none;
+    }
+
+    .ping-badge.ping-loading { background: rgba(148, 163, 184, .14); color: #94a3b8; }
+    .ping-badge.ping-fast { background: rgba(34, 197, 94, .15); color: #4ade80; }
+    .ping-badge.ping-good { background: rgba(132, 204, 22, .15); color: #a3e635; }
+    .ping-badge.ping-mid { background: rgba(245, 158, 11, .15); color: #fbbf24; }
+    .ping-badge.ping-slow { background: rgba(239, 68, 68, .15); color: #f87171; }
+    .ping-badge.ping-fail { background: rgba(148, 163, 184, .14); color: #94a3b8; }
+
+    /* 访问量角标同样内联 */
+    .visit-count {
+        position: static;
+        order: 11;
+        flex-shrink: 0;
+        font-size: 10px;
+        padding: 3px 7px;
+        border-radius: 999px;
+    }
+
+    /* 热门排名：放最左侧，小一圈 */
+    .hot-rank {
+        position: static;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        font-size: .66rem;
+        margin-right: -.25rem;
+    }
+
+    /* 热门区域沿用分组容器，只换描边与辉光 */
+    .section.featured-section {
+        border-radius: 0;
+        background: rgba(30, 41, 59, .55);
+        border-color: rgba(var(--sg-primary), .26);
+        box-shadow: 0 20px 25px -5px rgba(var(--sg-primary), .14),
+                    0 8px 10px -6px rgba(var(--sg-primary), .1);
+    }
+
+    @media (min-width: 640px) {
+        .section.featured-section { border-radius: 1.5rem; }
+    }
+
+    /* ---------- 浅色模式 ---------- */
+    body.light-theme .section {
+        background: rgba(255, 255, 255, .7);
+        border-color: rgba(229, 231, 235, .8);
+        box-shadow: 0 20px 25px -5px rgba(var(--sg-primary), .08),
+                    0 8px 10px -6px rgba(var(--sg-primary), .08);
+    }
+
+    body.light-theme .section-title { color: rgb(var(--sg-primary)); }
+    body.light-theme .section-icon { color: rgb(var(--sg-primary)); background: none; }
+    body.light-theme .section-subtitle { color: #6b7280; }
+
+    body.light-theme .site-card {
+        background: rgba(255, 255, 255, .5);
+        border-color: rgba(229, 231, 235, .5);
+    }
+
+    body.light-theme .site-card:hover {
+        border-color: rgba(var(--sg-primary), .3);
+        box-shadow: 0 10px 15px -3px rgba(var(--sg-primary), .1),
+                    0 4px 6px -4px rgba(var(--sg-primary), .1);
+    }
+
+    body.light-theme .site-icon { background: #f3f4f6; }
+    body.light-theme .site-name { color: #1f2937; }        /* text-gray-800 */
+    body.light-theme .site-card:hover .site-name { color: rgb(var(--sg-primary)); }
+    body.light-theme .site-desc { color: #6b7280; }        /* text-gray-500 */
+    body.light-theme .ping-badge { background: rgba(148, 163, 184, .16); color: #6b7280; }
+    body.light-theme .section.featured-section { background: rgba(255, 255, 255, .7); }
+
+    /* =========================================================
+       背景图轮播
+       图源 api.illlights.com/v1/img（随机 Galgame CG，与 searchgal.top 同源）
+       原 .background-container 被 display:none 隐藏，这里重新启用
+       ========================================================= */
+    .background-container {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .background-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        z-index: 1;
+        /* 视差位移由 JS 写入 --bg-x / --bg-y，两层共用 */
+        transform: translate(var(--bg-x, 0px), var(--bg-y, 0px)) scale(1.06);
+        transition: opacity 1.2s ease-in-out;
+        will-change: opacity, transform;
+    }
+
+    .background-image.is-active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    /* 压暗层：保证前景文字在任意画面上都可读 */
+    .glass-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        background: linear-gradient(180deg, rgba(15, 23, 42, .58), rgba(15, 23, 42, .70));
+    }
+
+    body.light-theme .glass-overlay {
+        background: linear-gradient(180deg, rgba(248, 250, 252, .66), rgba(248, 250, 252, .78));
+    }
+
     </style>
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -2300,6 +2924,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- 背景图片容器 -->
     <div class="background-container">
         <img src="https://picx.zhimg.com/v2-a6e68003f62e0ef2de9a19721ca570d7_r.jpg" alt="网站背景" class="background-image" id="siteBackground">
+        <img alt="" aria-hidden="true" class="background-image" id="siteBackgroundAlt">
         <div class="glass-overlay"></div>
     </div>
     
@@ -2464,7 +3089,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var COUNTER = {
             api: 'https://acg.soliar.top:8443/counter',
             // 是否让「热门网站」分组也按访问量排序；false 则保持 sites.json 手写顺序
-            sortFeatured: true,
+            // 保持 false：热门网站的 1/2/3/4 顺序由 sites.json 的 featured 数组决定
+            sortFeatured: false,
             // 拉取访问量的超时（毫秒），超时就按原始顺序渲染，绝不阻塞页面
             timeout: 2500
         };
@@ -2472,32 +3098,54 @@ document.addEventListener('DOMContentLoaded', function() {
         // url -> 访问量
         var visitCounts = {};
 
-        /** 拉取一批网址的访问量，失败/超时一律静默降级 */
+        /**
+         * 拉取一批网址的访问量，失败/超时一律静默降级。
+         *
+         * 实测接口契约（2026-07 验证）：
+         *   GET  /counter/counts?u=<url>&u=<url>…  →  {"counts":{"<url>": 2175}}
+         *   POST /counter/counts + {"urls":[...]}  →  {"ok":false,"error":"缺少 u 参数"}
+         *
+         * 注意该接口出错时同样返回 HTTP 200，所以不能用状态码判断成败，
+         * 必须看响应体里有没有 counts 字段。
+         * 用 GET 还附带一个好处：属于 CORS 简单请求，不触发 OPTIONS 预检。
+         * 分批请求，避免单条 URL 过长被网关截断。
+         */
         function fetchVisitCounts(urls) {
             if (!urls.length || !COUNTER.api) return Promise.resolve();
-            var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
-            var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, COUNTER.timeout);
-            return fetch(COUNTER.api + '/counts', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ urls: urls }),
-                signal: ctrl ? ctrl.signal : undefined
-            })
-                .then(function (res) { return res.ok ? res.json() : null; })
-                .then(function (data) {
-                    if (!data || !data.counts) return;
-                    Object.keys(data.counts).forEach(function (k) {
-                        visitCounts[k] = data.counts[k] || 0;
-                    });
+            var CHUNK = 40;
+            var groups = [];
+            for (var i = 0; i < urls.length; i += CHUNK) groups.push(urls.slice(i, i + CHUNK));
+
+            return Promise.all(groups.map(function (group) {
+                var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+                var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, COUNTER.timeout);
+                var qs = group.map(function (u) { return 'u=' + encodeURIComponent(u); }).join('&');
+                return fetch(COUNTER.api + '/counts?' + qs, {
+                    method: 'GET',
+                    cache: 'no-store',
+                    signal: ctrl ? ctrl.signal : undefined
                 })
-                .catch(function () { /* 计数服务不可用时不影响导航站 */ })
-                .then(function () { clearTimeout(timer); });
+                    .then(function (res) {
+                        // 该接口错误也返回 200，统一按 JSON 解析后再判断
+                        return res.json().catch(function () { return null; });
+                    })
+                    .then(function (data) {
+                        if (!data || !data.counts) return;
+                        Object.keys(data.counts).forEach(function (k) {
+                            visitCounts[k] = data.counts[k] || 0;
+                        });
+                    })
+                    .catch(function () { /* 计数服务不可用时不影响导航站 */ })
+                    .then(function () { clearTimeout(timer); });
+            }));
         }
 
         /** 记录一次访问，失败静默 */
         function recordVisit(url) {
             if (!url || !COUNTER.api) return;
             try {
+                // 与原作者部署保持一致：POST /hit + {url}。
+                // 该路由对 GET 返回 404，说明是 POST-only，不要改动。
                 fetch(COUNTER.api + '/hit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -2565,11 +3213,11 @@ document.addEventListener('DOMContentLoaded', function() {
 //                 '<div style="font-size:13px;color:#666;line-height:1.5;">国外AI超低价使用 · 一个APIKEY轻松接入<br>Claude、GPT、Gemini、Grok 等主流模型</div>' +
 //                 '</div>' +
 //                 '</a>' +
-            var adHtml = 
+            var adHtml =
+                '<section class="section ad-section">' +
                 '<a href="https://congyu.moe/auth/register?invite=3928a34c25" target="_blank" rel="noopener" class="ad-card-link">' +
                 '<i class="fas fa-bolt"></i> 从雨云-柚子厨专用加速器' +
                 '</a>' +
-                '</div>' +
                 '</section>';
             main.innerHTML = adHtml + sections.map(function (sec) {
                 var isFeatured = sec.id === 'featured';
@@ -2639,28 +3287,36 @@ document.addEventListener('DOMContentLoaded', function() {
                     sections = [{
                         id: 'featured',
                         title: '热门网站',
-                        subtitle: '精选推荐，按访问量排序',
+                        subtitle: '精选推荐，顺序由 sites.json 的 featured 数组决定',
                         icon: 'fas fa-fire',
                         sites: data.featured
                     }].concat(sections);
                 }
-                // 先拉访问量再渲染（失败/超时则按 sites.json 原始顺序）
+
+                // 先立即渲染：绝不等统计接口，接口慢/挂掉也不影响首屏
+                buildNav(sections);
+                buildContent(sections);
+                initNavInteraction();
+                initSearch(sections);
+                initLatency();
+
+                // 访问量在后台异步拉取；拿到数据后再刷新角标与排序
                 var allUrls = [];
                 sections.forEach(function (sec) {
                     (sec.sites || []).forEach(function (s) {
                         if (s && s.url) allUrls.push(s.url);
                     });
                 });
-                return fetchVisitCounts(allUrls).then(function () { return sections; });
-            })
-            .then(function (sections) {
-                buildNav(sections);
-                buildContent(sections);
-                initNavInteraction();
-                // 数据加载完成后初始化搜索
-                initSearch(sections);
-                // 数据加载完成后初始化延迟检测
-                initLatency();
+                fetchVisitCounts(allUrls).then(function () {
+                    if (!Object.keys(visitCounts).length) return; // 无数据则不重绘
+                    buildContent(sections);
+                    initLatency();
+                    // 重绘会丢掉搜索过滤状态，若正在搜索则重新应用一次
+                    var si = document.getElementById('searchInput');
+                    if (si && si.value.trim()) {
+                        si.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                });
             })
             .catch(function (err) {
                 console.error('加载 sites.json 失败:', err);
@@ -3021,39 +3677,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, true);
         document.addEventListener('DOMContentLoaded', function() {
-            //============0.公告内容==========
+            // 首访公告统一由上方 initFirstVisitNotice() 负责。
+            // 原此处还嵌套了一个 document.addEventListener('DOMContentLoaded', ...)，
+            // 在 DOMContentLoaded 派发过程中新加的监听器不会被本次派发调用，
+            // 因此它永远不会执行；若真的执行还会生成与上面重复的 id="firstVisitNotice"。
+            // 已移除该段死代码。
 
-            document.addEventListener('DOMContentLoaded', function() {
-    // 检查是否已经显示过公告
-    const hasSeenNotice = localStorage.getItem('hasSeenNotice');
-    
-    if (!hasSeenNotice) {
-        // 创建公告弹窗
-        const noticeModal = document.createElement('div');
-        noticeModal.id = 'firstVisitNotice';
-        noticeModal.innerHTML = `
-            <div class="notice-content">
-                <h3>✨ 欢迎来到秒速5厘米 ✨</h3>
-                <p>这里是ACG资源导航站，收集各种二次元资源</p>
-                <p>请遵守相关法律法规，合理使用资源</p>
-                <button id="closeNotice">我知道了</button>
-            </div>
-        `;
-        document.body.appendChild(noticeModal);
-        
-        // 3秒后显示关闭按钮
-        setTimeout(() => {
-            document.getElementById('closeNotice').style.display = 'block';
-        }, 3000);
-        
-        // 关闭按钮点击事件
-        document.getElementById('closeNotice').addEventListener('click', function() {
-            noticeModal.remove();
-            localStorage.setItem('hasSeenNotice', 'true');
-        });
-    }
-});
-            
             // ========== 1. 侧边栏折叠功能 ==========
 const collapseBtn = document.getElementById('collapseSidebar');
 const sidebar = document.querySelector('.sidebar');
@@ -3343,8 +3972,13 @@ if (collapseBtn) {
                 mouseY = (e.clientY / window.innerHeight) * 20 - 10;
             });
             
+            const bgContainer = document.querySelector('.background-container');
             function animateBackground() {
-                siteBackground.style.transform = `translate(${mouseX * 0.3}px, ${mouseY * 0.3}px) scale(1.05)`;
+                // 写 CSS 变量而非内联 transform：轮播时新旧两层共用同一视差，避免错位
+                if (bgContainer) {
+                    bgContainer.style.setProperty('--bg-x', (mouseX * 0.3) + 'px');
+                    bgContainer.style.setProperty('--bg-y', (mouseY * 0.3) + 'px');
+                }
                 requestAnimationFrame(animateBackground);
             }
             
@@ -3394,5 +4028,68 @@ if (collapseBtn) {
     });
 });
     </script>
+<script>
+    /* 背景图轮播：图源与 searchgal.top 相同（illights 随机 Galgame CG）
+       - 用户手动选过/上传过背景则完全交给用户，不轮播
+       - 预加载成功后才切换，避免闪白；失败静默等下一轮
+       - 标签页隐藏时跳过，省流量 */
+    (function () {
+        var container = document.querySelector('.background-container');
+        if (!container) return;
+        var layers = container.querySelectorAll('.background-image');
+        if (layers.length < 2) return;
+
+        if (localStorage.getItem('siteBackground')) return;
+
+        var API = 'https://api.illlights.com/v1/img';
+        var INTERVAL = 18000;
+        var cur = 0, busy = false, started = false;
+
+        function makeUrl() {
+            // 附加随机无效参数，强制浏览器每次发新请求（官方推荐的多请求做法）
+            return API + '?minsize=1080&r=' + Date.now().toString(36) +
+                Math.random().toString(36).slice(2, 7);
+        }
+
+        function apply(url) {
+            var nextIdx = (cur + 1) % layers.length;
+            var nextLayer = layers[nextIdx];
+            nextLayer.src = url;
+            nextLayer.classList.add('is-active');
+            layers[cur].classList.remove('is-active');
+            cur = nextIdx;
+        }
+
+        function step() {
+            if (busy || document.hidden) return;
+            busy = true;
+            var url = makeUrl();
+            var pre = new Image();
+            pre.onload = function () { busy = false; apply(url); };
+            pre.onerror = function () { busy = false; };  // 404 / 网络抖动：等下一轮
+            pre.src = url;
+        }
+
+        (function first(attempt) {
+            attempt = attempt || 0;
+            var url = makeUrl();
+            var pre = new Image();
+            pre.onload = function () {
+                layers[0].src = url;
+                layers[0].classList.add('is-active');
+                if (!started) { started = true; setInterval(step, INTERVAL); }
+            };
+            pre.onerror = function () {
+                // 首次失败退避重试，最多 5 次；仍失败则退回纯渐变背景
+                if (attempt < 5) setTimeout(function () { first(attempt + 1); }, 3000 * (attempt + 1));
+            };
+            pre.src = url;
+        })();
+
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden && started) step();
+        });
+    })();
+</script>
 </body>
 </html>
