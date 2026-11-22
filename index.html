@@ -2515,7 +2515,8 @@ html, body {
         transform: none;
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
-        transition: all .3s;
+        /* 只过渡这几个属性：transition: all 会让 180 张卡片每帧检查所有属性 */
+        transition: border-color .3s, box-shadow .3s, transform .3s;
     }
 
     /* 去掉原有的装饰伪元素与位移 */
@@ -2700,6 +2701,78 @@ html, body {
 
     body.light-theme .glass-overlay {
         background: linear-gradient(180deg, rgba(248, 250, 252, .66), rgba(248, 250, 252, .78));
+    }
+
+    /* =========================================================
+       性能优化
+       卡顿来源：20 个分组各自 16px 背景模糊 + 180 张卡片全量绘制
+       ========================================================= */
+
+    /* 20 层 backdrop-filter 在移动端极贵，改为更实的底色（文字对比度反而更好） */
+    .section {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(30, 41, 59, .82);
+    }
+
+    body.light-theme .section { background: rgba(255, 255, 255, .9); }
+
+    /* 分组跳过离屏渲染：滚动时只绘制视口附近的内容 */
+    .section {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 620px;
+    }
+
+    /* 全屏背景图取消常驻图层提升，避免移动端显存吃紧 */
+    .background-image { will-change: auto; }
+
+    @media (max-width: 768px) {
+        /* 移动端：所有毛玻璃一律关闭 */
+        .top-header,
+        .sidebar,
+        .main-footer,
+        .announcement-bar,
+        .glass-overlay,
+        .site-card {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+        .top-header { background: rgba(15, 23, 42, .96); }
+        .sidebar { background: rgba(15, 23, 42, .96); }
+        .section { background: rgba(30, 41, 59, .9); }
+        .main-footer { background: rgba(8, 13, 29, .96); }
+
+        body.light-theme .top-header,
+        body.light-theme .sidebar { background: rgba(255, 255, 255, .97); }
+        body.light-theme .section { background: rgba(255, 255, 255, .94); }
+        body.light-theme .main-footer { background: rgba(248, 250, 252, .96); }
+
+        /* 装饰性无限动画全部停掉，它们会让浏览器每帧重新合成 */
+        .announcement-bar::before,
+        .announcement-bar::after,
+        .section.featured-section::before,
+        .section.featured-section::after,
+        body::after {
+            animation: none !important;
+        }
+
+        /* 全屏遮罩上的大半径 mask 在低端机上很贵 */
+        body::before {
+            mask-image: none;
+            -webkit-mask-image: none;
+            opacity: .16;
+        }
+
+        /* 首屏淡入动画也去掉，减少一次全屏合成 */
+        body { animation: none; }
+
+        /* 阴影收敛：180 张卡片的 box-shadow 拖慢滚动 */
+        .site-card,
+        .featured-card,
+        .section.featured-section { box-shadow: none; }
+
+        .site-card:hover { box-shadow: 0 6px 16px -8px rgba(var(--sg-primary), .35); }
     }
 
     </style>
@@ -3236,7 +3309,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         visitBadgeHtml(site.url) +
                         '<div class="site-card-header">' +
                         rankHtml +
-                        '<img src="' + escapeHtml(site.icon) + '" alt="' + escapeHtml(site.name) + '" class="site-icon">' +
+                        '<img src="' + escapeHtml(site.icon) + '" alt="' + escapeHtml(site.name) + '" class="site-icon" loading="lazy" decoding="async">' +
                         '<div class="site-info">' +
                         '<div class="site-name"' + nameStyle + '>' + escapeHtml(site.name) + '</div>' +
                         '<div class="site-desc">' + escapeHtml(site.desc) + '</div>' +
@@ -3972,17 +4045,26 @@ if (collapseBtn) {
                 mouseY = (e.clientY / window.innerHeight) * 20 - 10;
             });
             
+            // 视差：仅在「有精确指针」的设备（鼠标）上启用。
+            // 原实现是常驻 requestAnimationFrame 每帧写样式，而触屏设备根本没有
+            // mousemove，等于在空转并持续让整页重绘 —— 移动端卡顿的主因。
             const bgContainer = document.querySelector('.background-container');
-            function animateBackground() {
-                // 写 CSS 变量而非内联 transform：轮播时新旧两层共用同一视差，避免错位
-                if (bgContainer) {
-                    bgContainer.style.setProperty('--bg-x', (mouseX * 0.3) + 'px');
-                    bgContainer.style.setProperty('--bg-y', (mouseY * 0.3) + 'px');
-                }
-                requestAnimationFrame(animateBackground);
+            const supportsHover = window.matchMedia
+                ? window.matchMedia('(hover: hover) and (pointer: fine)').matches
+                : false;
+
+            if (bgContainer && supportsHover) {
+                let parallaxTicking = false;
+                document.addEventListener('mousemove', function () {
+                    if (parallaxTicking) return;
+                    parallaxTicking = true;
+                    requestAnimationFrame(function () {
+                        parallaxTicking = false;
+                        bgContainer.style.setProperty('--bg-x', (mouseX * 0.3).toFixed(2) + 'px');
+                        bgContainer.style.setProperty('--bg-y', (mouseY * 0.3).toFixed(2) + 'px');
+                    });
+                }, { passive: true });
             }
-            
-            animateBackground();
             
             // 子导航点击
             const navSubitems = document.querySelectorAll('.nav-subitems a');
@@ -4045,9 +4127,15 @@ if (collapseBtn) {
         var INTERVAL = 18000;
         var cur = 0, busy = false, started = false;
 
+        // 手机屏幕小，请求 1080 只会白白多解码上百万像素
+        var IS_SMALL = window.matchMedia
+            ? window.matchMedia('(max-width: 768px)').matches
+            : false;
+        var MIN_SIZE = IS_SMALL ? 720 : 1080;
+
         function makeUrl() {
             // 附加随机无效参数，强制浏览器每次发新请求（官方推荐的多请求做法）
-            return API + '?minsize=1080&r=' + Date.now().toString(36) +
+            return API + '?minsize=' + MIN_SIZE + '&r=' + Date.now().toString(36) +
                 Math.random().toString(36).slice(2, 7);
         }
 
